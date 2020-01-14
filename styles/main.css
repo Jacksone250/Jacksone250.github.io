@@ -1,6 +1,7 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     max-width: 1080px;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -11,6 +12,12 @@ header, footer {
 
 header {
 height: 10em;
+padding: 1em;
+}
+
+main {
+    padding: 1em;
+    margin: 1em;
 }
 
 footer {
@@ -22,8 +29,11 @@ h1, h2, ul, p {
     text-align: center;
 }
 
+h1 {
+    font-size: 4em;
+}
+
 #profileImage {
     float: right;
-    width: 200px;
-    margin: 0 50px 0 0;
+    max-width: 150px;
 }
