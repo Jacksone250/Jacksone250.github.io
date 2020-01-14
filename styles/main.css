@@ -1,5 +1,29 @@
 body {
-    color: yellow;
-    background-color: teal;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    max-width: 1080px;
+    margin: 0 auto;
 }
 
+header, footer {
+    color: ivory;
+    background-color: green;
+}
+
+header {
+height: 10em;
+}
+
+footer {
+    height: 5em;
+
+}
+
+h1, h2, ul, p {
+    text-align: center;
+}
+
+#profileImage {
+    float: right;
+    width: 200px;
+    margin: 50px;
+}
