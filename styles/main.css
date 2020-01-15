@@ -2,7 +2,7 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     max-width: 1080px;
     width: 90%;
-    margin: 0 auto;
+    margin: 3em auto;
 }
 
 header, footer {
