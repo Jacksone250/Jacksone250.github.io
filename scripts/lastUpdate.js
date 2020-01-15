@@ -1,5 +1,3 @@
-const currentDate = new Date();
-
-let lastUpdateDate = currentDate.getTime;
+const lastUpdateDate = document.lastModified;
 
 document.getElementById("lastUpdateDate").innerHTML = lastUpdateDate;
