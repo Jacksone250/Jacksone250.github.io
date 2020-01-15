@@ -33,6 +33,10 @@ h1 {
     font-size: 4em;
 }
 
+ul {
+list-style: none;
+}
+
 #profileImage {
     float: right;
     max-width: 150px;
