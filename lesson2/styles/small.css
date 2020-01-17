@@ -1,0 +1,59 @@
+/* html selectors prefix none */
+
+body {
+    font-family: 'Roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    max-width: 1080px;
+    width: 100%;
+    margin: 3em auto;
+}
+
+header,
+footer {
+    color: ivory;
+    background-color: green;
+}
+
+header {
+    height: 100%;
+padding: 1em;
+display: grid;
+grid-template-columns: 1fr;
+align-items: center;
+}
+
+article {
+    padding: 1em;
+    margin: 1em;
+}
+
+footer {
+    height: 5em;
+
+}
+
+h1,
+h2,
+ul,
+p {
+    text-align: center;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+ul {
+    list-style: none;
+}
+
+/* class selectors prefix '.' */
+
+
+
+
+/* id selectors prefix '#'*/
+
+#profileImage {
+    margin: auto; 
+    max-width: 150px;
+}

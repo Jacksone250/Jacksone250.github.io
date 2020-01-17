@@ -5,14 +5,15 @@ body {
     margin: 3em auto;
 }
 
-header, footer {
+header,
+footer {
     color: ivory;
     background-color: green;
 }
 
 header {
-height: 10em;
-padding: 1em;
+    height: 10em;
+    padding: 1em;
 }
 
 main {
@@ -25,7 +26,10 @@ footer {
 
 }
 
-h1, h2, ul, p {
+h1,
+h2,
+ul,
+p {
     text-align: center;
 }
 
@@ -34,7 +38,7 @@ h1 {
 }
 
 ul {
-list-style: none;
+    list-style: none;
 }
 
 #profileImage {

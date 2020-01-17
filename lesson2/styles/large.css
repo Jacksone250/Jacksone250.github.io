@@ -10,7 +10,10 @@
     
     
     /* id selectors prefix '#'*/
-
+    #profileImage {
+        float: right;
+        max-width: 150px;
+    }
 
 
 

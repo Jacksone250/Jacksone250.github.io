@@ -1,6 +1,5 @@
-
 const currentDate = new Date();
-console.log(currentDate) 
+console.log(currentDate)
 
 let currentYear = currentDate.getFullYear()
 console.log(currentYear)
