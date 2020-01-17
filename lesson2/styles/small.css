@@ -5,6 +5,7 @@ body {
     max-width: 1080px;
     width: 100%;
     margin: 3em auto;
+    background-color: lightslategrey;
 }
 
 header,
@@ -15,15 +16,16 @@ footer {
 
 header {
     height: 100%;
-padding: 1em;
-display: grid;
-grid-template-columns: 1fr;
-align-items: center;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
 }
 
 article {
     padding: 1em;
     margin: 1em;
+    background-color: lightsteelblue;
 }
 
 footer {
@@ -54,6 +56,6 @@ ul {
 /* id selectors prefix '#'*/
 
 #profileImage {
-    margin: auto; 
+    margin: auto;
     max-width: 150px;
 }
