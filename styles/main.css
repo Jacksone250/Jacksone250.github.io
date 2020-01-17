@@ -1,7 +1,7 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     max-width: 1080px;
-    width: 90%;
+    width: 100%;
     margin: 3em auto;
 }
 
@@ -22,8 +22,8 @@ main {
 }
 
 footer {
-    height: 5em;
-
+    height: 100%;
+    padding: 1em;
 }
 
 h1,
