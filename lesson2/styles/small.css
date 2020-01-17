@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    max-width: 1080px;
+    max-width: 1280px;
     width: 100%;
     margin: 3em auto;
     background-color: lightslategrey;
@@ -26,6 +26,8 @@ article {
     padding: 1em;
     margin: 1em;
     background-color: lightsteelblue;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 footer {
@@ -41,15 +43,22 @@ p {
 }
 
 h1 {
-    font-size: 4em;
+    font-size: 3em;
 }
+
+h3 {
+    text-align: center;
+}
+
 
 ul {
     list-style: none;
 }
 
 /* class selectors prefix '.' */
-
+.description {
+    text-align: left;
+}
 
 
 
