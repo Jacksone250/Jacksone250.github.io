@@ -1,8 +1,33 @@
 @media only screen and (min-width: 64em){
     /* html selectors prefix none */ 
+    header {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+    }
+
+    header img, header h1 {
+        display: inline-block;
+    }
+
+    header img {
+        grid-column: 4/5;
+        grid-row: 1/2;
+    }
+    header h1 {
+        grid-row: 1/2;
+        grid-column: 2/4;
+    }
     
+    article {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
 
-
+    h2 {
+        grid-row: 1/2;
+        grid-column: 1/5;
+    }
 
     /* class selectors prefix '.' */ 
     

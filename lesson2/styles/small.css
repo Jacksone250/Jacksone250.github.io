@@ -19,6 +19,7 @@ header {
     padding: 1em;
     display: grid;
     grid-template-columns: 1fr;
+    gap: 1em;
     align-items: center;
 }
 
@@ -28,6 +29,7 @@ article {
     background-color: lightsteelblue;
     display: grid;
     grid-template-columns: 1fr;
+    gap: 1em;
 }
 
 footer {
