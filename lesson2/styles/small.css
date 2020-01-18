@@ -32,6 +32,12 @@ article {
     gap: 1em;
 }
 
+section img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+
 footer {
     height: 100%;
     padding: 1em;
