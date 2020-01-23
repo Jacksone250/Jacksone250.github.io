@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
 </head>
 
 <body>
 <header>
-
+    <img src="images/me-resized-to-s.jpg" alt="Picture of Ethan" id="profileImage">
+    <h1>Ethan Jackson</h1>
 </header>
     <!-- Flexbox Froggy to learn flex for a menu -->
     <nav>
@@ -33,8 +39,15 @@
         <!-- hey this is  a comment use ctrl + /  -->
     </main>
     <footer>
-
+        <p>
+            &copy; <span id="currentYear"></span> | Ethan Jackson | Idaho | <a href="https://www.byui.edu/">BYU-I</a>
+        </p>
+        <p>
+            Last Updated: <span id="lastUpdateDate"></span>
+        </p>
     </footer>
+    <script src="../scripts/currentDate.js"></script>
+    <script src="../scripts/lastUpdate.js"></script>
 </body>
 
 </html>
