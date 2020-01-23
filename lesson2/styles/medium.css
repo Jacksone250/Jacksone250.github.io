@@ -17,6 +17,7 @@
     }
 
     header h1 {
+        font-size: 4em;
         grid-row: 1/2;
         grid-column: 1/2;
     }
