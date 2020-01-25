@@ -8,6 +8,10 @@ body {
     background-color: lightslategrey;
 }
 
+ul {
+    padding: 0;
+}
+
 header,
 footer {
     color: ivory;
@@ -21,6 +25,34 @@ header {
     grid-template-columns: 1fr;
     gap: 1em;
     align-items: center;
+}
+
+nav {
+    background-color: lightskyblue;
+    max-width: 1280px;
+    width: 100%;
+}
+
+nav ul {
+    margin-top: 0;
+}
+
+
+nav ul img {
+    width: 5em;
+}
+
+nav ul li {
+    margin-bottom: .5em;
+    border-bottom: 2px solid gray;
+}
+
+nav a {
+    display: block;
+    color: black;
+    
+    padding: .5em 0em .1em 0em; 
+    text-decoration: none;
 }
 
 article {
@@ -38,6 +70,9 @@ section img {
     max-width: 100%;
 }
 
+li div {
+    padding: .5em 0em .5em 0em;
+}
 footer {
     height: 100%;
     padding: 1em;
@@ -73,4 +108,49 @@ ul {
 #profileImage {
     margin: auto;
     max-width: 150px;
+}
+/* Light Color Theme */
+#lcolor1 {
+    background-color: #69FFF1;
+}
+
+#lcolor2 {
+    background-color: #63D471;
+}
+
+#lcolor3 {
+    background-color: #63A46C;
+}
+
+#lcolor4 {
+    background-color: #6A7152;
+}
+
+#lcolor5 {
+    color: #69FFF1;
+    background-color: #233329;
+}
+
+
+/* Dark color Theme */ 
+#dcolor1 {
+    color: ivory;
+    background-color: #000000;
+}
+
+#dcolor2 {
+    color: #9FCC2E;
+    background-color: #0E402D;
+}
+
+#dcolor3 {
+    background-color: #295135;
+}
+
+#dcolor4 {
+    background-color: #5A6650;
+}
+
+#dcolor5 {
+    background-color: #9FCC2E;
 }

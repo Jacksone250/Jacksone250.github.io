@@ -1,3 +1,33 @@
 @media only screen and (min-width: 65em) {
+    /* html selectors prefix none */ 
+    header {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+    }
+
+    header img, header h1 {
+        display: inline-block;
+    }
+
+    header img {
+        grid-column: 4/5;
+        grid-row: 1/2;
+    }
+    header h1 {
+        grid-row: 1/2;
+        grid-column: 1/4;
+    }
     
+
+    /* class selectors prefix '.' */ 
+    
+    
+    
+    
+    /* id selectors prefix '#'*/
+    #profileImage {
+        float: right;
+        max-width: 150px;
+    }
 }
