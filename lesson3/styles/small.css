@@ -1,0 +1,76 @@
+/* html selectors prefix none */
+
+body {
+    font-family: 'Roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    max-width: 1280px;
+    width: 100%;
+    margin: 3em auto;
+    background-color: lightslategrey;
+}
+
+header,
+footer {
+    color: ivory;
+    background-color: green;
+}
+
+header {
+    height: 100%;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    align-items: center;
+}
+
+article {
+    padding: 1em;
+    margin: 1em;
+    background-color: lightsteelblue;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+}
+
+section img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+
+footer {
+    height: 100%;
+    padding: 1em;
+}
+
+h1,
+h2,
+ul,
+p {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h3 {
+    text-align: center;
+}
+
+
+ul {
+    list-style: none;
+}
+
+/* class selectors prefix '.' */
+
+
+
+
+/* id selectors prefix '#'*/
+
+#profileImage {
+    margin: auto;
+    max-width: 150px;
+}
