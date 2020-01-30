@@ -1,0 +1,34 @@
+/* Cascade Example Code */
+
+#cascade {
+    font-weight: bolder;
+    color: purple;
+}
+
+#specific {
+    color: darkblue;
+}
+
+.specificity {
+    color: red;
+}
+
+/* .specificity {
+    color: limegreen;
+} */
+
+
+/* Inheritence Example Code */
+
+body {
+    font-family: monospace;
+    color: blueviolet;
+    background-color: burlywood;
+}
+
+#inheritance {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: ivory;
+    background-color: blue;
+}
+
