@@ -1,0 +1,11 @@
+@media only screen and (min-width: 32.5em) {
+    /* html tag selectors */
+    
+
+    nav ul {
+        flex-direction: row;
+    }
+    /* class selectors */ 
+
+    /* id selectors  */
+}

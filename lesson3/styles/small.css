@@ -4,7 +4,7 @@ body {
     font-family: 'Roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     max-width: 1280px;
     width: 100%;
-    margin: 3em auto;
+    margin: 0 auto;
     background-color: lightslategrey;
 }
 
@@ -19,7 +19,7 @@ footer {
 }
 
 header {
-    height: 100%;
+    width: 100%;
     padding: 1em;
     display: grid;
     grid-template-columns: 1fr;

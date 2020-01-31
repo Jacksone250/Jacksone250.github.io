@@ -1,14 +1,104 @@
-/* html Selectors */ 
-body {
-    font-family: 'Roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
+/* html Selectors */
 
-ul {
-    list-style: nones;
-}
+    /* entire body general rules */
+    body {
+        font-family: 'Roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        background-color: #69FFF1;
+        margin: 0 auto;
+    }
 
-/* class selectors */ 
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    /* general header rules  */
+    header {
+        max-width: 100%;
+        display: flex;
+        text-align: center;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #63A46C;
+    }
+
+    header img {
+        padding: 10px;
+        max-width: 7em;
+        min-width: 5em;
+        width: 15%;
+    }
+
+    header div {
+        margin-right: 7em;
+        padding: 10px;
+    }
+
+    /* general nav rules */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        margin: 0;
+        width: 100%;
+        padding: 0%;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav div {
+        background-color: #63D471;
+    }
+
+    nav h3 {
+        margin: 0em;
+        padding: .5em;
+        color: black;
+    }
+
+    nav div:active {
+        border-bottom: 3px solid #233329;
+    }
+
+    nav div:hover {
+        border-bottom: 2px solid #233329;
+    }
+
+    /* general main rules */
+    main {
+        margin: 1em auto;
+        padding: .5em;
+        max-width: 1280px;
+        background-color: #63A46C;
+        text-align: center;
+    }
+
+    section {
+        margin: .5em;
+        padding: .5em;
+        background-color: #63D471;
+    }
+
+    main p {
+        text-align: left;
+    }
+
+    /* general footer rules */
+    footer {
+        padding-top: .5em;
+        padding-bottom: .5em;
+        width: 100%;
+        background-color: #63A46C;
+        text-align: center;
+    }
+
+/* class selectors */
 
 
-/* id selectors */ 
-
+/* id selectors */
