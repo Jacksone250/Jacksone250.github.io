@@ -98,6 +98,16 @@
     }
 
 /* class selectors */
+    .navigation li:first-child{
+        display: block;
+    }
 
+    .navigation li {
+        display: none;
+    }
+
+    .responsive li {
+        display: block;
+    }
 
 /* id selectors */
