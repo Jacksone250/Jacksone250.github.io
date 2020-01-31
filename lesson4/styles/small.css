@@ -20,7 +20,7 @@
         max-width: 100%;
         display: flex;
         text-align: center;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         background-color: #63A46C;
     }
@@ -38,6 +38,9 @@
     }
 
     /* general nav rules */
+    nav {
+        background-color: #63D471;
+    }
     nav ul {
         display: flex;
         flex-direction: column;
@@ -50,10 +53,6 @@
 
     nav ul li {
         width: 100%;
-    }
-
-    nav div {
-        background-color: #63D471;
     }
 
     nav h3 {
