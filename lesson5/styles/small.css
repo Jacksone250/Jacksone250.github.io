@@ -61,7 +61,8 @@
         color: black;
     }
 
-    nav a:active, nav div:active {
+    nav a:active {
+        color: hotpink;
         background-color: #63A46C;
         border-bottom: 3px solid #233329;
     }
