@@ -15,7 +15,7 @@
 
 <body>
     <aside>
-        <p> Saturday = Preston Pancakes in the Park!  9:00 a.m. Saturday at the city park pavilion. </p>
+        <p> Saturday = Preston Pancakes in the Park! 9:00 a.m. Saturday at the city park pavilion. </p>
     </aside>
     <header>
         <img src="../lesson3/images/hot-cold-weather-logo-resized-s.png" alt="Hot Cold Weather Logo">
@@ -28,7 +28,7 @@
         <ul class="navigation">
             <li>
                 <a class="ham" href="#">
-                    <div class="lnk">
+                    <div>
                         <h3>&equiv; Menu</h3>
                     </div>
                 </a>
@@ -79,13 +79,17 @@
     </nav>
     <main>
         <h1>Preston</h1>
-        <section>
+        <section id="hero">
             <!-- Hero Image -->
             <img id="hero-image" src="images/Gotland,Sweden.jpg" alt="Volcanic Lightening">
-            <article id="weather-summary">
+            <article class="weather-summary">
+
+                <h3>Weather Summary</h3>
                 <div>
+
                     <span>Current Temperature:</span>
                     <span id="current-temp"></span>
+
                 </div>
                 <div>
                     <span>Wind Speed:</span>
@@ -95,12 +99,12 @@
                     <span>Humidity:</span>
                     <span id="humidity"></span>
                 </div>
+
             </article>
         </section>
         <section id="fiveday-forcast">
             <!-- 5-day forecast for the next five days -->
             <h2>5-Day Forecast</h2>
-
             <table>
                 <thead>
                     <tr>
@@ -150,7 +154,7 @@
         </section>
         <section>
             <h2>Contact Us</h2>
-            <div id="contact" >
+            <div id="contact">
                 <address>
                     123 This Street <br> Anytown, ID 00000 <br> Phone#: 000-000-0000 <br> email@domain.com
                 </address>
