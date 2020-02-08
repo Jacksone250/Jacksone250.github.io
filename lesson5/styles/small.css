@@ -61,7 +61,7 @@
         color: black;
     }
 
-    nav a:active {
+    nav a:active, nav div:active {
         background-color: #63A46C;
         border-bottom: 3px solid #233329;
     }
