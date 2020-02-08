@@ -61,12 +61,6 @@
         color: black;
     }
 
-    nav a:active {
-        color: hotpink;
-        background-color: #63A46C;
-        border-bottom: 3px solid #233329;
-    }
-
     nav div:hover {
         border-bottom: 2px solid #233329;
     }
@@ -124,6 +118,11 @@
 
     .responsive li {
         display: block;
+    }
+
+    .active {
+        background-color: #63A46C;
+        border-bottom: 3px solid #233329;
     }
 
 /* id selectors */
