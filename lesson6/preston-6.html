@@ -82,7 +82,14 @@
         <h1>Preston</h1>
         <section id="hero">
             <!-- Hero Image -->
-            <img id="hero-image" src="images/Gotland,Sweden.jpg" alt="Volcanic Lightening">
+            <picture>
+                <source>
+                <source srcset="images/cit230_image_franklinOriginal_400_t.jpg" media="(max-width: 400px)">
+                <source srcset="images/cit230_image_franklinOriginal_800_t.jpg" media="(max-width: 800px)">
+                <source srcset="images/cit230_image_franklinOriginal_1200_t.jpg" media="(min-width: 801px)">
+                <img src="images/cit230_image_franklinOriginal_400_t.jpg" alt="franklin picture">
+            </picture>
+            <!-- <img id="hero-image" src="images/Gotland,Sweden.jpg" alt="Volcanic Lightening"> -->
             <article class="weather-summary">
 
                 <h3>Weather Summary</h3>
