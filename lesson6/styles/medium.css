@@ -25,11 +25,6 @@
         height: 5em;
     }
     /* id selectors  */
-    #weather-summary {
-        /* position: absolute;
-        top: 350px; */
-    }
-
     #fiveday-forcast {
         display: block;
     }

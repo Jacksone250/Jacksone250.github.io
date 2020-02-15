@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Preston 5</title>
+    <title>Preston 5</title> 
+    <!-- links to css and Favicon -->
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="../styles/normalize.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap"> -->
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
@@ -82,12 +83,11 @@
         <h1>Preston</h1>
         <section id="hero">
             <!-- Hero Image -->
-            <picture>
-                <source>
+            <picture id="hero-picture">
                 <source srcset="images/cit230_image_franklinOriginal_400_t.jpg" media="(max-width: 400px)">
                 <source srcset="images/cit230_image_franklinOriginal_800_t.jpg" media="(max-width: 800px)">
                 <source srcset="images/cit230_image_franklinOriginal_1200_t.jpg" media="(min-width: 801px)">
-                <img src="images/cit230_image_franklinOriginal_400_t.jpg" alt="franklin picture">
+                <img id="hero-image" src="images/cit230_image_franklinOriginal_400_t.jpg" alt="franklin picture">
             </picture>
             <!-- <img id="hero-image" src="images/Gotland,Sweden.jpg" alt="Volcanic Lightening"> -->
             <article class="weather-summary">
@@ -103,9 +103,9 @@
                     <span>Wind Speed:</span>
                     <span id="wind-speed"></span>
                 </div>
-                <div>
-                    <span>Humidity:</span>
-                    <span id="humidity"></span>
+                <div id="wind-chill-div">
+                    <span>Wind Chill:</span>
+                    <span id="wind-chill"></span>
                 </div>
 
             </article>
@@ -185,10 +185,12 @@
             Last Updated: <span id="lastUpdateDate"></span>
         </p>
     </footer>
-    <script src="scripts/new.js"></script>
+    <!-- links to scripts -->
+    <script src="scripts/webfontloader.js"></script>
     <script src="scripts/menu.js"></script>
     <script src="scripts/dateDMY.js"></script>
     <script src="../scripts/lastUpdate.js"></script>
+    <script src="scripts/new.js"></script>
 </body>
 
 </html>
