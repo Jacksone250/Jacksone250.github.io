@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Preston 5</title> 
+    <!-- links to css and Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap"> -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+</head>
+
+<body>
+    <aside>
+        <p> Saturday = Preston Pancakes in the Park! 9:00 a.m. Saturday at the city park pavilion. </p>
+    </aside>
+    <header>
+        <img src="../lesson3/images/hot-cold-weather-logo-resized-s.png" alt="Hot Cold Weather Logo">
+        <div>
+            <h1>Hot Cold Weather</h1>
+            <p>Look hot, stay cool.</p>
+        </div>
+    </header>
+    <nav>
+        <ul class="navigation">
+            <li>
+                <a class="ham" href="#">
+                    <div>
+                        <h3>&equiv; Menu</h3>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="lnk">
+                        <h3>Home</h3>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="lnk">
+                        <h3>Preston</h3>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="lnk">
+                        <h3>Soda Springs</h3>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="lnk">
+                        <h3>Fish Haven</h3>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="lnk">
+                        <h3>Storm Center</h3>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="lnk">
+                        <h3>Gallery</h3>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Preston</h1>
+        <section id="hero">
+            <!-- Hero Image -->
+            <picture id="hero-picture">
+                <source srcset="images/cit230_image_franklinOriginal_400_t.jpg" media="(max-width: 400px)">
+                <source srcset="images/cit230_image_franklinOriginal_800_t.jpg" media="(max-width: 800px)">
+                <source srcset="images/cit230_image_franklinOriginal_1200_t.jpg" media="(min-width: 801px)">
+                <img id="hero-image" src="images/cit230_image_franklinOriginal_400_t.jpg" alt="franklin picture">
+            </picture>
+            <!-- <img id="hero-image" src="images/Gotland,Sweden.jpg" alt="Volcanic Lightening"> -->
+            <article class="weather-summary">
+
+                <h3>Weather Summary</h3>
+                <div>
+
+                    <span>Current Temperature:</span>
+                    <span id="current-temp"></span>
+
+                </div>
+                <div>
+                    <span>Wind Speed:</span>
+                    <span id="wind-speed"></span>
+                </div>
+                <div id="wind-chill-div">
+                    <span>Wind Chill:</span>
+                    <span id="wind-chill"></span>
+                </div>
+
+            </article>
+        </section>
+        <section id="fiveday-forcast">
+            <!-- 5-day forecast for the next five days -->
+            <h2>5-Day Forecast</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th id="day1">Day 1</th>
+                        <th id="day2">Day 2</th>
+                        <th id="day3">Day 3</th>
+                        <th id="day4">Day 4</th>
+                        <th id="day5">Day 5</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="temp1">50&deg;</td>
+                        <td id="temp2">50&deg;</td>
+                        <td id="temp3">50&deg;</td>
+                        <td id="temp4">50&deg;</td>
+                        <td id="temp5">50&deg;</td>
+                    </tr>
+            </table>
+        </section>
+        <section>
+            <!-- Article for news or something else -->
+            <h2>Article</h2>
+            <img src="images/Franklin_County_Courthouse,_Preston,_Idaho.jpg"
+                alt="Franklin County Courthouse Preston, Idaho" id="article-image">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </section>
+        <section>
+            <h2>Contact Us</h2>
+            <div id="contact">
+                <address>
+                    123 This Street <br> Anytown, ID 00000 <br> Phone#: 000-000-0000 <br> email@domain.com
+                </address>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2879.0082163285315!2d-111.78527078411905!3d43.81418897911609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53540b03c3c8b0cd%3A0xfd28a97e4cccebc!2s525%20S%20Center%20St%2C%20Rexburg%2C%20ID%2083460!5e0!3m2!1sen!2sus!4v1581010148199!5m2!1sen!2sus"
+                    width="90%" height="250" frameborder="0" style="border:0;" allowfullscreen="">
+                </iframe>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <p>
+            &copy; Hot Cold Weather | Ethan Jackson
+        </p>
+        <p>
+            <span id="currentDate"></span>
+        </p>
+        <p>
+            Last Updated: <span id="lastUpdateDate"></span>
+        </p>
+    </footer>
+    <!-- links to scripts -->
+    <script src="scripts/webfontloader.js"></script>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/dateDMY.js"></script>
+    <script src="../scripts/lastUpdate.js"></script>
+    <script src="scripts/new.js"></script>
+</body>
+
+</html>
