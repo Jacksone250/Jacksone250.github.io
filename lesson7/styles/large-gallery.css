@@ -17,7 +17,17 @@
         display: none;
     }
 
+    figure:hover {
+        box-shadow: 0px 0px 20px;
+    }
+
     /* class selectors */ 
 
     /* id selectors  */
+    #gallery-display {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
 }

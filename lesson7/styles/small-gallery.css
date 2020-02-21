@@ -84,15 +84,17 @@
         text-align: left;
     }
 
-    table, tr, th, td {
-        padding: 1em;
-        border: 1px solid black;
-        border-collapse: collapse;
+    figure {
+        max-width: 100%;
+        border: white solid 1px;
+        background-color: ivory;
+        box-shadow: -1px 1px 5px;
     }
 
-    table {
-        margin: 0 auto;
+    figcaption {
+        margin: 0em;
     }
+
 
     /* general footer rules */
     footer {
@@ -103,13 +105,6 @@
         text-align: center;
     }
 
-    address {
-        margin: 1em;
-    }
-
-    iframe {
-        display: none;
-    }
 
 /* class selectors */
     .hidden {
@@ -132,45 +127,15 @@
         border-bottom: 3px solid #233329;
     }
 
-    .weather-summary {
-        padding: 1em;
-        position: absolute;
-        top: 10%;
-        left: 5%;
-        background-color: rgba(70, 130, 180, 0.6);;
-        color: white;
-        font-weight: bolder;
-        text-align: left;
-    }
-
-    .weather-summary h3 {
-        margin: 0;
-    }
-
 /* id selectors */
-
-    #hero {
-        position: relative;
+    #gallery-display {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
     }
 
-    #hero-picture {
-        display: block;
+    #gallery-display img {
+        margin: 0em;
         max-width: 100%;
-    }
-
-    #hero-image {
-        margin: 0 auto;
-        display: block;
-        max-width: 100%;
-    }
-
-    #article-image {
-        margin: 1em;
-        max-width: 25%;
-        min-width: 12em;
-        float: right;
-    }
-
-    #fiveday-forcast {
-        display: none;
     }
