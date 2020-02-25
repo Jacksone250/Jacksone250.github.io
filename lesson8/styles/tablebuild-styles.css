@@ -1,0 +1,39 @@
+table, caption, tr, th, td {
+    border: 1px solid lightgrey;
+    border-collapse: collapse;
+    padding: 5px;
+    font-family: "Ubuntu", sans-serif;
+    text-align: center;
+}
+
+table {
+    margin: 3em;
+    box-shadow: 5px 5px 5px #628ca6;
+}
+
+tr {
+    background-color:#e7ffed;
+}
+
+tr:nth-child(odd) {
+    background-color: #e7f0ed;
+
+}
+
+th, #november-sales-goal {
+    color: white; 
+    background-color:  #628ca6;
+}
+
+thead tr:nth-child(1) {
+    font-size: 1.4em;
+    font-weight: bolder;
+}
+
+tfoot td, thead tr:nth-child(1){
+    background-color: #7fb9c2;
+}
+
+tfoot td {
+    font-size: .70em;
+}
