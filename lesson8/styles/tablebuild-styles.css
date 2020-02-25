@@ -1,4 +1,4 @@
-table, caption, tr, th, td {
+table, tr, th, td {
     border: 1px solid lightgrey;
     border-collapse: collapse;
     padding: 5px;
@@ -7,8 +7,8 @@ table, caption, tr, th, td {
 }
 
 table {
-    margin: 3em;
-    box-shadow: 5px 5px 5px #628ca6;
+    margin: 5em;
+    box-shadow: 7px 7px 10px #628ca6;
 }
 
 tr {
