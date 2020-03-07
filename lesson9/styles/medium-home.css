@@ -1,0 +1,31 @@
+@media only screen and (min-width: 32.5em) {
+    /* html tag selectors */
+    header div {
+        margin-right: 7em;
+        padding: 10px;
+    }
+
+    iframe {
+        display: block;
+        margin: 1em;
+    }
+
+    /* class selectors */ 
+    .navigation {
+        flex-direction: row;
+    }
+    .navigation li:first-child{
+        display: none;
+    }
+
+    .navigation li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 5em;
+    }
+    /* id selectors  */
+    #cities {
+        grid-template-columns: 1fr 1fr;
+    }
+}
