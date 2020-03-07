@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Storm Center</title>
+    <!-- links to css and Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap"> -->
+    <link rel="stylesheet" href="styles/small-stormcenter.css">
+    <link rel="stylesheet" href="styles/medium-stormcenter.css">
+    <link rel="stylesheet" href="styles/large-stormcenter.css">
+</head>
+
+<body>
+    <aside>
+        <p> Saturday = Preston Pancakes in the Park! 9:00 a.m. Saturday at the city park pavilion. </p>
+    </aside>
+    <header>
+        <img src="../lesson3/images/hot-cold-weather-logo-resized-s.png" alt="Hot Cold Weather Logo">
+        <div>
+            <h1>Hot Cold Weather</h1>
+            <p>Look hot, stay cool.</p>
+        </div>
+    </header>
+    <nav>
+        <ul class="navigation">
+            <li>
+                <a class="ham" href="#">
+                    <div>
+                        <h3>&equiv; Menu</h3>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="lnk">
+                        <h3>Home</h3>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="preston-8.html">
+                    <div class="lnk">
+                        <h3>Preston</h3>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="lnk">
+                        <h3>Soda Springs</h3>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="lnk">
+                        <h3>Fish Haven</h3>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="lnk">
+                        <h3>Storm Center</h3>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="gallery-8.html">
+                    <div class="lnk">
+                        <h3>Gallery</h3>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <form action="thanks.html" method="GET">
+            <div>
+                <label for="fullName">Full Name: </label>
+                <input type="text" id="fullName" name="fullName" required placeholder="John Smith">
+            </div>
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" placeholder="example@domain.com">
+            </div>
+            <div>
+                <label for="phoneNumber">Phone Number: </label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" required>
+            </div>
+            <div>
+                <label for="zipCode">Zip Code: </label>
+                <input type="number" id="zipCode" name="zipCode" required>
+            </div>
+            <div>
+                <label for="stormDate">Storm Date: </label>
+                <input type="date" id="stormDate" name="stormDate">
+            </div>
+            <div>
+                <label for="stormType">Storm Type: </label>
+                <input type="datalist" id="stormType" list="storms">
+                <datalist id="storms">
+                    <option value="flashFlood">Flash Flood</option>
+                    <option value="hail">Hail</option>
+                    <option value="hurricane">Hurricane</option>
+                    <option value="thunderstorm">Thunderstorm</option>
+                    <option value="tornado">Tornado</option>
+                </datalist>
+            </div>
+            <div class="slider">
+                <label for="stormSeverity">Storm Severity: </label>
+                <input type="range" name="stormSeverity" id="stormSeverity" 
+                        min="1" max="10" list="tickmarks" value="5"
+                        oninput="adjustRating(this.value)"
+                        onchange="adjustRating(this.value)" >
+                <span id="rating">5</span>
+                <datalist id="tickmarks">
+                    <option value="0"></option>
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                    <option value="4"></option>
+                    <option value="5"></option>
+                    <option value="6"></option>
+                    <option value="7"></option>
+                    <option value="8"></option>
+                    <option value="9"></option>
+                    <option value="10"></option>
+                </datalist>
+            </div>
+            <div class="selectList">
+                <label for="stormRegion">Storm Region: </label>
+                <select name="stormRegion" id="stormRegion" required>
+                    <option value="" selected disabled>Select Region ...</option>
+                    <option value="preston">Preston</option>
+                    <option value="soda-springs">Soda Springs</option>
+                    <option value="fish-haven">Fish Haven</option>
+                </select>
+            </div>
+            <div class="radioButtons">
+                <label>User in Danger Level: </label>
+                <label for="yes">
+                    <input type="radio" value="yes" name="userInDangerLevel" id="yes"> Yes
+                </label>
+                <label for="no">
+                    <input type="radio" value="no" name="userInDangerLevel" id="no"> No
+                </label>
+                <label for="maybe">
+                    <input type="radio" value="maybe" name="userInDangerLevel" id="maybe"> Maybe
+                </label>
+            </div>
+            <div class="textarea">
+                <label for="additionalInfoComments">Additional Information or Comments: </label>
+                <textarea name="additionalInfoComments" id="additionalInfoComments" cols="30" rows="10"></textarea>
+            </div>
+            <div class="submitReset">
+                <input type="submit" value="Submit" id="submit">
+                <input type="reset" value="Reset" id="reset">
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>
+            &copy; Hot Cold Weather | Ethan Jackson
+        </p>
+        <p>
+            <span id="currentDate"></span>
+        </p>
+        <p>
+            Last Updated: <span id="lastUpdateDate"></span>
+        </p>
+    </footer>
+    <!-- links to scripts -->
+    <script src="scripts/webfontloader.js"></script>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/dateDMY.js"></script>
+    <script src="../scripts/lastUpdate.js"></script>
+    <script src="scripts/new.js"></script>
+    <script src="scripts/rating.js"></script>
+</body>
+
+</html>
