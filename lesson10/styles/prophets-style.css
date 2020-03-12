@@ -1,0 +1,39 @@
+#cards {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#cards article {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    background-color: lightblue;
+    margin: 1em;
+    padding: 1em;
+    width: 20em;
+}
+
+#cards img {
+    justify-self: center;
+    box-shadow: 1px 1px 15px black;
+    max-width: 20em;
+    width: 80%;
+}
+
+
+
+@media only screen and (min-width: 32.5em) {
+    #cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media only screen and (min-width: 65em){
+    #cards {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
