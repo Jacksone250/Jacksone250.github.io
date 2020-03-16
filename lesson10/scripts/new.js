@@ -1,7 +1,6 @@
 // weather summary update 
 
-const apiURL = 'https://api.openweathermap.org/data/2.5/weather?id=5604473&appid=2be460d3e530a2b612efa298610ed104&units=imperial';
-
+ const apiURL = 'https://api.openweathermap.org/data/2.5/weather?id=5604473&appid=2be460d3e530a2b612efa298610ed104&units=imperial';
 
 fetch(apiURL)
     .then(response => response.json())
@@ -27,10 +26,6 @@ fetch(apiURL)
               document.querySelector('#wind-chill-div').classList.add('hidden');
             }
 
-
-            // document.querySelector('#weatherDesc').textContent = 
-            //   jsObject.weather[0].main;
-
               document.getElementById('weatherDesc').textContent = 
               jsObject.weather[0].main;
             
@@ -46,13 +41,35 @@ fetch(apiURL)
         }
     );
 
+// Forcast fetch to get the 5 day forcast
 
+const forecastURL = 'https://api.openweathermap.org/data/2.5/forecast?id=5604473&appid=2be460d3e530a2b612efa298610ed104&units=imperial';
 
+fetch(forecastURL)
+    .then(response => response.json())
+    .then(
+      jsObject => {
+        console.log(jsObject);
 
+        let counter = 1;
 
+        jsObject.list.forEach(forecast => {
+          if (forecast.dt_txt.includes('18:00')){
+            console.log(forecast.dt_txt);
 
+            let forecastdate = new Date(forecast.dt_txt.replace(' ', 'T'));
+            let dayOfWeek = daysOfWeek[forecastdate.getDay()];
+            
+            document.getElementById(`day${counter}`).textContent = dayOfWeek;
 
+            document.getElementById(`temp${counter}`).innerHTML = forecast.main.temp.toFixed(0) + '&deg;';
 
+            counter++;
+          }
+        });
+
+      }
+    );
 
 
 // aside pancakse at the park 
