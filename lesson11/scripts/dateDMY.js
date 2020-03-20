@@ -1,3 +1,6 @@
+
+// used by all pages for date and time poosible candidate for utilities or main 
+
 /* Wednesday, 20 May 2020 */ 
 
 let fullDate;

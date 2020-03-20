@@ -1,4 +1,6 @@
 
+// lazy loader for the gallery only 
+
 let imagesToLoad = document.querySelectorAll('img[data-src]');
 
 const loadImages = (image) => {
