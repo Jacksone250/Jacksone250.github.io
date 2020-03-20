@@ -9,13 +9,12 @@
     <!-- links to css and Favicon -->
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="../styles/normalize.css">
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap"> -->
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
 </head>
 
-<body onload="getEvents('preston'); getCurrentWeather('5604473');">
+<body onload="getEvents('preston');">
     <aside>
         <p> Saturday = Preston Pancakes in the Park! 9:00 a.m. Saturday at the city park pavilion. </p>
     </aside>
@@ -81,15 +80,14 @@
     </nav>
     <main>
         <h1>Preston</h1>
+        <!-- Hero Image -->
         <section id="hero">
-            <!-- Hero Image -->
             <picture id="hero-picture">
                 <source srcset="images/cit230_image_franklinOriginal_400_t.jpg" media="(max-width: 400px)">
                 <source srcset="images/cit230_image_franklinOriginal_800_t.jpg" media="(max-width: 800px)">
                 <source srcset="images/cit230_image_franklinOriginal_1200_t.jpg" media="(min-width: 801px)">
                 <img id="hero-image" src="images/cit230_image_franklinOriginal_400_t.jpg" alt="franklin picture">
             </picture>
-            <!-- <img id="hero-image" src="images/Gotland,Sweden.jpg" alt="Volcanic Lightening"> -->
             <article class="weather-summary">
 
                 <h3>Weather Summary</h3>
@@ -112,8 +110,8 @@
 
             </article>
         </section>
+        <!-- 5-day forecast for the next five days -->
         <section id="fiveday-forcast">
-            <!-- 5-day forecast for the next five days -->
             <h2>5-Day Forecast</h2>
             <table>
                 <thead>
@@ -140,8 +138,8 @@
             <ul id="events">
             </ul>
         </section>
+        <!-- Article for news or something else -->
         <section>
-            <!-- Article for news or something else -->
             <h2>Article</h2>
             <img src="images/Franklin_County_Courthouse,_Preston,_Idaho.jpg"
                 alt="Franklin County Courthouse Preston, Idaho" id="article-image">
@@ -193,11 +191,12 @@
         </p>
     </footer>
     <!-- links to scripts -->
+    <script src="scripts/weatherapi.js"></script>
     <script src="scripts/webfontloader.js"></script>
     <script src="scripts/menu.js"></script>
     <script src="scripts/dateDMY.js"></script>
     <script src="../scripts/lastUpdate.js"></script>
-    <script src="scripts/new.js"></script>
+    <script src="scripts/main-preston.js"></script>
     <script src="scripts/towndata.js"></script>
 </body>
 
