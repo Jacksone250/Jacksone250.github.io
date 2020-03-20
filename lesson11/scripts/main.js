@@ -1,5 +1,7 @@
 // This is the main JS file for index.html for Hot Cold Weather
 
+
+
 // loads the font from google
 WebFont.load({
   google: {
@@ -8,6 +10,8 @@ WebFont.load({
     ]
   }
 });
+
+
 
 // attaching active class to active links
 const navBar = document.querySelector('.navigation');
@@ -23,6 +27,8 @@ for (let i = 0; i < links.length; i++) {
   });
 }
 
+
+
 // Responsive menu js
 const hambutton = document.querySelector(".ham");
 hambutton.addEventListener("click", toggleMenu, false);
@@ -30,6 +36,8 @@ hambutton.addEventListener("click", toggleMenu, false);
 function toggleMenu() {
   document.querySelector(".navigation").classList.toggle("responsive");
 }
+
+
 
 // Code for Dates that will be used throughout the page 
 let fullDate;
@@ -64,6 +72,7 @@ document.querySelector('#currentDate').textContent = fullDate;
 // adjust the last update date 
 const lastUpdateDate = document.lastModified;
 document.getElementById("lastUpdateDate").innerHTML = lastUpdateDate;
+
 
 
 // gets the cities and their info to be displayed for the users
