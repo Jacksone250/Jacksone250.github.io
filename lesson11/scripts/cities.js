@@ -1,3 +1,7 @@
+
+// PLEASE NOTE: This file should no longer be in use trouble shoot removing it when ready to be gin removing files.
+
+// gets the cities and their info to be displayed for the users
 fetch('https://byui-cit230.github.io/weather/data/towndata.json')
     .then(result => {
         return result.json();
