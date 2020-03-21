@@ -195,7 +195,11 @@
         padding-right: 1.5em;
     }
 
-    #upcoming-events h3 {
+    #upcoming-events h2 {
+        color: white;
+        background-color: #233329;
+        margin-top: 0em;
+        padding: .5em 0 .5em 0;
         border-bottom: 1px solid black;
     }
 

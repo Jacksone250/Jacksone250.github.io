@@ -14,18 +14,19 @@ WebFont.load({
 
 
 // attaching active class to active links
-const navBar = document.querySelector('.navigation');
-const links = navBar.getElementsByClassName('lnk');
+// const navBar = document.querySelector('.navigation');
+// const links = navBar.getElementsByClassName('lnk');
+// console.log(links);
 
-for (let i = 0; i < links.length; i++) {
-  links[i].addEventListener("click", function () {
-    let current = document.getElementsByClassName("active");
-    if (current.length > 0) {
-      current[0].className = current[0].className.replace(" active", "");
-    }
-    this.className += " active";
-  });
-}
+// for (let i = 0; i < links.length; i++) {
+//   links[i].addEventListener("click", function () {
+//     let current = document.getElementsByClassName("active");
+//     if (current.length > 0) {
+//       current[0].className = current[0].className.replace("active", "");
+//     }
+//     this.className += "active";
+//   });
+// }
 
 
 
