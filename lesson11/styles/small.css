@@ -86,12 +86,25 @@
 
     table, tr, th, td {
         padding: 1em;
-        border: 1px solid black;
+        border-top: 1px solid black;
+        border-left: 1px solid black;
         border-collapse: collapse;
     }
 
     table {
         margin: 0 auto;
+        margin-bottom: 1em;
+    }
+
+    thead {
+        color: white;
+        background-color: #233329;
+    }
+
+    tbody {
+        background-color: #69FFF1;
+        font-weight: bolder;
+        font-size: 1.5em;
     }
 
     /* general footer rules */
@@ -173,4 +186,23 @@
 
     #fiveday-forcast {
         display: none;
+    }
+
+    #upcoming-events {
+        max-width: 325px;
+        margin: 0 auto;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+
+    #upcoming-events h3 {
+        border-bottom: 1px solid black;
+    }
+
+    #events {
+        padding: 0;
+    }
+
+    #events li {
+        margin: .5em;
     }

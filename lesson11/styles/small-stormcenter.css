@@ -90,6 +90,7 @@ input[type="text"] {
     }
 
     form {
+        background-color: #63D471;
         font-weight: bold;
         padding: 1em;
     }

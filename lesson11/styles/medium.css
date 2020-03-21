@@ -10,6 +10,11 @@
         margin: 1em;
     }
 
+    section {
+        margin: 1em;
+        padding: 2em;
+    }
+
     /* class selectors */ 
     .navigation {
         flex-direction: row;
@@ -26,7 +31,10 @@
     }
     /* id selectors  */
     #fiveday-forcast {
+        max-width: 650px;
         display: block;
+        margin: 0 auto;
+        margin-bottom: 1em;
     }
 
     #contact {

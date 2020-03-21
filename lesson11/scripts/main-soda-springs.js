@@ -89,7 +89,15 @@ fetch(forecastURL)
             let forecastdate = new Date(forecast.dt_txt.replace(' ', 'T'));
             let dayOfWeek = daysOfWeek[forecastdate.getDay()];
             document.getElementById(`day${counter}`).textContent = dayOfWeek;
-            document.getElementById(`temp${counter}`).innerHTML = forecast.main.temp.toFixed(0) + '&deg;';
+            document.getElementById(`temp${counter}`).innerHTML = `<img id="icon${counter}" src="" alt="">${forecast.main.temp.toFixed(0)}&deg;F`;
+            const weatherIcon = document.getElementById(`icon${counter}`);
+            // setting icon
+            const image = 'https://openweathermap.org/img/w/' +
+                forecast.weather[0].icon + '.png';
+            weatherIcon.setAttribute('src', image);
+            // adjusting icon alt text
+            let alt = forecast.weather[0].description;
+            weatherIcon.setAttribute('alt', alt);
             counter++;
           }
         });

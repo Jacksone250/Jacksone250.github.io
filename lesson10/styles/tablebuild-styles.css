@@ -17,7 +17,6 @@ tr {
 
 tr:nth-child(odd) {
     background-color: #e7f0ed;
-
 }
 
 th, #november-sales-goal {
