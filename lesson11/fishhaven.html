@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="styles/large.css">
 </head>
 
-<body onload="getEvents('fish haven');">
+<body>
     <header>
         <img src="../lesson3/images/hot-cold-weather-logo-resized-s.png" alt="Hot Cold Weather Logo">
         <div>
@@ -91,7 +91,7 @@
                 <h3>Weather Summary</h3>
                 <div>
                     <span id="weatherDesc"></span>
-                    <img id="weatherImg" src="" alt="" >
+                    <img id="weather-icon" src="" alt="" >
                 </div>
                 <div>
                     <span>Current Temperature:</span>
@@ -191,13 +191,8 @@
         </p>
     </footer>
     <!-- links to scripts -->
-    <script src="scripts/weatherapi.js"></script>
     <script src="scripts/webfontloader.js"></script>
-    <script src="scripts/menu.js"></script>
-    <script src="scripts/dateDMY.js"></script>
-    <script src="../scripts/lastUpdate.js"></script>
-    <script src="scripts/main-fish-haven.js"></script>
-    <script src="scripts/towndata.js"></script>
+    <script src="scripts/main-fish-haven.js" type="module"></script>
 </body>
 
 </html>

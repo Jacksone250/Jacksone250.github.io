@@ -1,87 +1,19 @@
-// weather summary update 
-
- const apiURL = 'https://api.openweathermap.org/data/2.5/weather?id=5604473&appid=2be460d3e530a2b612efa298610ed104&units=imperial';
-
-fetch(apiURL)
-    .then(response => response.json())
-    .then(
-        jsObject => {
-            console.log(jsObject);
-
-            let f,t,s;
-
-             // getting current temp
-            t = jsObject.main.temp;
-            document.querySelector('#current-temp').innerHTML = `${t.toFixed(0)}&deg;`;
-
-            // getting wind speed
-            s = jsObject.wind.speed;
-            document.querySelector('#wind-speed').innerHTML = `${s.toFixed(0)} mph`;
-
-            if (t <= 50 && s >= 3) {
-              f = 35.74 + 0.6215 * t - 35.75 * Math.pow(s, 0.16) + 0.4275 * t * Math.pow(s, 0.16);
-              document.querySelector('#wind-chill').innerHTML = f.toFixed(0) + '&deg;';
-            } else {
-              f = 'N/A'
-              document.querySelector('#wind-chill-div').classList.add('hidden');
-            }
-
-              document.getElementById('weatherDesc').textContent = 
-              jsObject.weather[0].main;
-            
-            const weatherImg = document.querySelector('#weatherImg');
-            
-            // setting icon
-            const image = `https://openweathermap.org/img/w/${jsObject.weather[0].icon}.png`;
-            weatherImg.setAttribute('src', image);
-            
-            // adjusting icon alt text
-            let alt = jsObject.weather[0].description;
-            weatherImg.setAttribute('alt', alt);
-        }
-    );
-
-// Forcast fetch to get the 5 day forcast
-
-const forecastURL = 'https://api.openweathermap.org/data/2.5/forecast?id=5604473&appid=2be460d3e530a2b612efa298610ed104&units=imperial';
-
-fetch(forecastURL)
-    .then(response => response.json())
-    .then(
-      jsObject => {
-        console.log(jsObject);
-
-        let counter = 1;
-
-        jsObject.list.forEach(forecast => {
-          if (forecast.dt_txt.includes('18:00')){
-            console.log(forecast.dt_txt);
-
-            let forecastdate = new Date(forecast.dt_txt.replace(' ', 'T'));
-            let dayOfWeek = daysOfWeek[forecastdate.getDay()];
-            
-            document.getElementById(`day${counter}`).textContent = dayOfWeek;
-
-            document.getElementById(`temp${counter}`).innerHTML = forecast.main.temp.toFixed(0) + '&deg;';
-
-            counter++;
-          }
-        });
-
-      }
-    );
+// This is the main JS file for fish-haven.html for Hot Cold Weather
 
 
-// aside pancakse at the park 
-const checkDay = new Date();
-const aside = document.querySelector('aside');
+import { getEvents } from './utilities.js';
+import { getCurrentWeather } from './utilities.js';
 
-if (checkDay.getDay() !== 5) {
-  aside.style.display = 'none';
-} else {
-  aside.style.display = 'block';
-}
 
+
+// loads the font from google
+WebFont.load({
+  google: {
+    families: [
+      'Roboto'
+    ]
+  }
+});
 
 // attaching active class to active links
 const navBar = document.querySelector('.navigation');
@@ -97,10 +29,74 @@ for (let i = 0; i < links.length; i++) {
   });
 }
 
-WebFont.load({
-  google: {
-    families: [
-      'Roboto'
-    ]
-  }
-});
+
+
+// Responsive menu js
+const hambutton = document.querySelector(".ham");
+hambutton.addEventListener("click", toggleMenu, false);
+
+function toggleMenu() {
+  document.querySelector(".navigation").classList.toggle("responsive");
+}
+
+
+
+// Code for Dates that will be used throughout the page 
+let fullDate;
+const currentDate = new Date(); 
+
+// Get day of week 
+const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 
+                    'Wednesday', 'Thursday', 'Friday', 
+                    'Saturday'];
+const day = daysOfWeek[currentDate.getDay()];
+
+// Get day of Month 
+const dayOfMonth = currentDate.getDate();
+
+// Get  month 
+const months = ['January', 'February', 'March', 'April', 
+                'May', 'June', 'July', 'August', 
+                'September', 'October', 'November', 
+                'December']
+const month = months[currentDate.getMonth()];
+
+// Get year
+let year = currentDate.getFullYear();
+
+// Full date 
+fullDate = day + ', ' + dayOfMonth + ' ' + month + ' ' + year;
+
+//document.getElementById('currentDate').innerHTML = fullDate;
+// or....
+document.querySelector('#currentDate').textContent = fullDate;
+
+// adjust the last update date 
+const lastUpdateDate = document.lastModified;
+document.getElementById("lastUpdateDate").innerHTML = lastUpdateDate;
+
+
+// Forcast fetch to get the 5 day forcast
+const forecastURL = 'https://api.openweathermap.org/data/2.5/forecast?id=5585010&appid=2be460d3e530a2b612efa298610ed104&units=imperial';
+
+fetch(forecastURL)
+    .then(response => response.json())
+    .then(
+      jsObject => {
+        let counter = 1;
+        jsObject.list.forEach(forecast => {
+          if (forecast.dt_txt.includes('18:00')){
+            let forecastdate = new Date(forecast.dt_txt.replace(' ', 'T'));
+            let dayOfWeek = daysOfWeek[forecastdate.getDay()];
+            document.getElementById(`day${counter}`).textContent = dayOfWeek;
+            document.getElementById(`temp${counter}`).innerHTML = forecast.main.temp.toFixed(0) + '&deg;';
+            counter++;
+          }
+        });
+
+      }
+    );
+
+
+getEvents('fish haven');
+getCurrentWeather(5585010);
