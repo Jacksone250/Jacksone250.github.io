@@ -1,0 +1,200 @@
+{
+    "templesList": [
+        {
+            "templeName": "Rexburg Idaho Temple",
+            "streetLine1": "750 S 2nd E",
+            "streetLine2": "",
+            "city": "Rexburg",
+            "state": "Idaho",
+            "country": "USA",
+            "zip": "83440-5404",
+            "telephone": "208-656-0880",
+            "email": "REXBU-OFF@ChurchofJesusChrist.org",
+            "services": [
+                "Clothing rental available",
+                "Distribution center nearby",
+                "No cafeteria available",
+                "No patron housing available"
+            ],
+            "History": [{
+                    "date": "12 December 2003",
+                    "milestone": "Announced"
+                },
+                {
+                    "date": "30 July 2005",
+                    "milestone": "Groundbreaking"
+                },
+                {
+                    "date": "10 February 2008",
+                    "milestone": "Dedicated"
+                }
+            ],
+            "schedule": {
+                "Baptism": "9:00am - 4:00pm (Group Appointments Availible)",
+                "Iniatory": "6:00am - 8:00pm",
+                "Endowment": "6:00am - 7:30pm Sessions every 45 minutes",
+                "Sealing": "6:00am - 8:00pm (Appointments Availible)"
+            },
+            "closure": [
+                "Sunday, March 22 - Monday, Aril 27", 
+                "Saturday, July 4",
+                "Saturday, July 25",
+                "Monday, August 24 - Monday, September 14", 
+                "Saturday, October 3", 
+                "Wednesday, Novermber 25 - Thursday, November 26",
+                "Thursday, December 24 - Friday,  December 25",
+                "Thursday, December 31, 2020 - Friday, January 1, 2021"
+            ]
+        },
+        {
+            "templeName": "Gilbert Arizona Temple",
+            "streetLine1": "3301 S Greenfield Rd",
+            "streetLine2": "",
+            "city": "Gilbert",
+            "state": "Arizona",
+            "country": "USA",
+            "zip": "85297",
+            "telephone": "480-822-5000",
+            "email": "GILBE-OFF@ChurchofJesusChrist.org",
+            "services": [
+                "Clothing rental available",
+                "Distribution center nearby",
+                "No cafeteria available",
+                "No patron housing available"
+            ],
+            "History": [{
+                    "date": "10 April 2008",
+                    "milestone": "Announced"
+                },
+                {
+                    "date": "13 November 2010",
+                    "milestone": "Groundbreaking"
+                },
+                {
+                    "date": "2 March 2014",
+                    "milestone": "Dedicated"
+                }
+            ],
+            "schedule": {
+                "Baptism": "5:30am - 4:00pm (Group Appointments Availible)",
+                "Iniatory": "6:30am - 8:30pm",
+                "Endowment": "5:30am - 7:45pm Sessions every 45 minutes",
+                "Sealing": "5:30am - 8:30pm"
+            },
+            "closure": [
+                "Monday, March 16 - Monday, March 30", 
+                "Saturday, April 4", 
+                "Saturday, July 4",
+                "Saturday, October 3", 
+                "Monday, October 5 - Monday, October 26", 
+                "Wednesday, Novermber 25 - Thursday, November 26",
+                "Thursday, December 24 - Friday,  December 25",
+                "Thursday, December 31"
+            ]
+        },
+        {
+            "templeName": "Hawaii Temple",
+            "streetLine1": "55-600 Naniloa Loop",
+            "streetLine2": "",
+            "city": "Laie",
+            "state": "Hawaii",
+            "country": "USA",
+            "zip": "96762-2202",
+            "telephone": "(1)808-293-2427",
+            "email": "REXBU-OFF@ChurchofJesusChrist.org",
+            "services": [
+                "Clothing rental available",
+                "Distribution center nearby",
+                "No cafeteria available",
+                "No patron housing available"
+            ],
+            "History": [{
+                    "date": "October 3, 1915",
+                    "milestone": "Temple Annouced"
+                },
+                {
+                    "date": "February 8, 1915",
+                    "milestone": "Groundbreaking"
+                },
+                {
+                    "date": "November 27, 1919",
+                    "milestone": "Dedication Date"
+                },
+                {
+                    "date": "June 13, 1978",
+                    "milestone": "Dedication Date"
+                },
+                {
+                    "date": "November 21, 2010",
+                    "milestone": "Dedication Date"
+                }
+            ],
+            "schedule": {
+                "Baptism": "7:00am - 9:00am, 2:00pm- 4:00pm (Group Appointments Availible)",
+                "Iniatory": "Appointment Only",
+                "Endowment": "7:00am - 8:00pm Sessions every hour",
+                "Sealing": "Appointment Only"
+            },
+            "closure": [
+                "Tuesday, March 24 - Monday, April 27", 
+                "Friday, April 3 (Limited Hours)",
+                "Friday, June 26 (Limited Hours)",
+                "Saturday, June 27 (Limited Hours)",
+                "Monday, June 29 - Monday, July 13",
+                "Friday, October 2 (Limited Hours)",
+                "Saturday, October 3",
+                "Wednesday, November 25 (Limited Hours)",
+                "Thursday, Novemebr 26",
+                "Thursday, December 24 - Friday, December 25",
+                "Thursday, December 31 (Limited Hours)",
+                "Friday, January 1, 2021",
+                "Saturday, January 2, 2021 (Limited Hours)",
+                "Monday, January 4 - Monday, January 18, 2021"
+            ]
+        },
+        {
+            "templeName": "Nauvoo Temple",
+            "streetLine1": "50 N Wells St",
+            "streetLine2": "",
+            "city": "Nauvoo",
+            "state": "Illinois",
+            "country": "USA",
+            "zip": "62354",
+            "telephone": "(1)217-453-6252",
+            "email": "NAUV2-OFF@ChurchofJesusChrist.org",
+            "services": [
+                "Clothing rental available",
+                "No Distribution center nearby",
+                "No cafeteria available",
+                "No patron housing available"
+            ],
+            "History": [{
+                    "date": "4 April 1999",
+                    "milestone": "Announced"
+                },
+                {
+                    "date": "24 October 1999",
+                    "milestone": "Groundbreaking"
+                },
+                {
+                    "date": "27 June 2002",
+                    "milestone": "Dedicated"
+                }
+            ],
+            "schedule": {
+                "Baptism": "8:00am - 12:00pm, 2:00pm - 7:00pm (Group Appointments Availible)",
+                "Iniatory": "8:00am - 7:00pm (Appointments Availible)",
+                "Endowment": "8:00am - 6:00pm Sessions every hour",
+                "Sealing": "8:00am - 8:00pm (Appointments Availible)"
+            },
+            "closure": [
+                "Wednesday, March 18 - Monday April, 27 (Limited Hours)",
+                "Saturday, March 21 - Saturday, Ma 16", 
+                "Saturday, October 3",
+                "Tuesday, November 10 - Saturday, November 21", 
+                "Wednesday, Novermber 25 - Thursday, November 26",
+                "Friday, December 25"
+            ]
+        }
+    ]
+}
