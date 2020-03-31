@@ -1,7 +1,10 @@
 {
-    "templesList": [
+    "templeList": [
         {
             "templeName": "Rexburg Idaho Temple",
+            "weatherId": "5605242",
+            "imageName": "rexburg-idaho-temple-day.jpg",
+            "imageAlt": "The Rexburg Idaho Temple",
             "streetLine1": "750 S 2nd E",
             "streetLine2": "",
             "city": "Rexburg",
@@ -48,6 +51,9 @@
         },
         {
             "templeName": "Gilbert Arizona Temple",
+            "weatherId": "5295903",
+            "imageName": "gilbert-arizona-temple.jpg",
+            "imageAlt": "The Gilbert Arizona Temple viewed from afar",
             "streetLine1": "3301 S Greenfield Rd",
             "streetLine2": "",
             "city": "Gilbert",
@@ -93,7 +99,10 @@
             ]
         },
         {
-            "templeName": "Hawaii Temple",
+            "templeName": "Laie Hawaii Temple",
+            "weatherId": "5850027",
+            "imageName": "laie-hawaii-temple-day.jpg",
+            "imageAlt": "The Laie Hawaii Temple",
             "streetLine1": "55-600 Naniloa Loop",
             "streetLine2": "",
             "city": "Laie",
@@ -153,7 +162,10 @@
             ]
         },
         {
-            "templeName": "Nauvoo Temple",
+            "templeName": "Nauvoo Illinois Temple",
+            "weatherId": "4903330",
+            "imageName": "nauvoo-illinois-temple-evening.jpg",
+            "imageAlt": "The Nauvoo Illinois Temple",
             "streetLine1": "50 N Wells St",
             "streetLine2": "",
             "city": "Nauvoo",
