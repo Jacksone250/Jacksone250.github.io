@@ -16,8 +16,9 @@ fetch('json/temples.json')
             templeInfo.innerHTML = `
                 <section>
                     <h2>${temple.templeName} Summary</h2>
-                    <img src="images/${temple.imageName}" alt="${temple.imgAlt}">
+                    <img src="images/${temple.imageName}" alt="${temple.imageAlt}" class="templeImg">
                     <div>
+                        <h3>Contact Information</h3>
                         <p>Address: ${temple.streetLine1} ${temple.city}, ${temple.state} ${temple.zip} ${temple.country}</p>
                         <p>Phone: ${temple.telephone}</p>
                         <p>Email: ${temple.email}</p>
@@ -45,7 +46,7 @@ fetch('json/temples.json')
                 </section>
                 <section>
                     <h3>Current Weather</h3>
-                    <img id="weatherIcon${i}" src="" alt="" >
+                    <img id="weatherIcon${i}" class="weatherIcon" src="" alt="" >
                     <p>Current Conditions: <span id="weatherDesc${i}"></span></p>
                     <p>Temperature: <span id="temp${i}"></span></p>
                     <p>Wind Speed: <span id="windSpeed${i}"></span></p>

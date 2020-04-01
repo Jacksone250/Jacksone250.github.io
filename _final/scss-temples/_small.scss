@@ -1,4 +1,99 @@
+// tag selectors
+body {
+    font-family: $fontFamily;
+    font-weight: $fontLW;
+    background-color: $alabaster;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: $fontHW;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    background-color: $black;
+    color: white;
+    border-bottom: 5px solid $yellowOrange;
+
+    img {
+        margin: auto;
+        grid-row: 1/3;
+    }
+
+    div {
+        h1 {
+            margin: 1em 0 .25em 0;
+        }
+        p {
+            margin: .5em;
+        }
+    }
+}
+
+nav {
+    li {
+    }
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 90%;
+    margin: 0 auto;
+
+    h2 {
+        background-color: $black;
+        color: white;
+        border-bottom: 5px solid $steelBlue; 
+        border-right: 5px solid $steelBlue; 
+        padding: .5em;
+    }
+
+    h3 {
+        background-color: $black;
+        color: white;
+        border-bottom: 5px solid $silver; 
+        border-right: 5px solid $silver; 
+        padding: .25em .5em;
+    }
+
+    p {
+        margin: .5em;
+        padding-left: .5em;
+    }
+}
+
+footer {
+    background-color: $black;
+    color: white;
+    text-align: center;
+    padding: .5em;
+}
+
+// class selectors
+
+.templeImg {
+    border: 3px solid white;
+    box-shadow: 0 0 7px black;
+}
+
+.weatherIcon {
+    margin: 0 3em;
+}
+
 // hidden class
 .hidden {
     display: none;
 }
+
+// id selectors
+
+
