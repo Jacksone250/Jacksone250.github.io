@@ -1,0 +1,46 @@
+// tag selectors
+
+header {
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+nav {
+    a {
+        padding: .25em;
+    }
+}
+
+form {
+    max-width: 50%;
+}
+
+// class selectors
+
+// responsive nav styles
+.navigation {
+    flex-direction: row;
+}
+.navigation li:first-child{
+    display: none;
+}
+
+.navigation li {
+    font-size: .75em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2em;
+}
+
+.submitReset {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+// id selectors 
+
+#submit, #reset {
+    height: 2em;
+    width: 8em;
+    margin: .3em;
+}
