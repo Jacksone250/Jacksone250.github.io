@@ -10,7 +10,11 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 img {
-    max-width: 100%;
+    max-width: 98.5%;
+}
+
+a {
+    text-decoration: none;
 }
 
 header {
@@ -24,6 +28,7 @@ header {
     border-bottom: 5px solid $yellowOrange;
 
     img {
+        display: block;
         margin: auto;
         grid-row: 1/3;
     }
@@ -39,7 +44,34 @@ header {
 }
 
 nav {
+    margin: 0 auto;
+    max-width: 95%;
+    font-size: 2em;
+    font-weight: $fontHW;
+    text-align: center;
+    color: $black;
+
+    ul {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        list-style: none;
+    }
+
     li {
+        margin: .1em;
+        background-color: $silver;
+        width: 100%;
+    }
+
+    a {
+        color: $black;
+    }
+
+    a:visited {
+        color: $black;
     }
 }
 
@@ -81,6 +113,8 @@ footer {
 // class selectors
 
 .templeImg {
+    display: block;
+    margin: 0 auto;
     border: 3px solid white;
     box-shadow: 0 0 7px black;
 }
@@ -92,6 +126,24 @@ footer {
 // hidden class
 .hidden {
     display: none;
+}
+// responsive navigation styles
+.navigation li:first-child{
+    display: block;
+}
+
+.navigation li {
+    display: none;
+}
+
+.responsive li {
+    display: block;
+}
+
+// Wayfinding 
+.active {
+    border-top: 3px solid $black;
+    border-left: 3px solid $black;
 }
 
 // id selectors

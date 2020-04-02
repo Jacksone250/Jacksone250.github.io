@@ -1,0 +1,44 @@
+// tag selectors
+
+header {
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+nav {
+    a {
+        padding: .25em;
+    }
+}
+
+// class selectors
+
+// responsive nav styles
+.navigation {
+    flex-direction: row;
+}
+.navigation li:first-child{
+    display: none;
+}
+
+.navigation li {
+    font-size: .75em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2em;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+// id selectors 
+
+#callAction {
+    position: fixed;
+    top: 85%;
+    left: 67%;
+    font-weight: bolder;
+    text-align: left;
+}

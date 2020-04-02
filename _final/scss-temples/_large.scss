@@ -1,0 +1,33 @@
+// tag selector
+
+header {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    img {
+        grid-column: 2/3;
+    }
+
+    div {
+        grid-column: 3/4;
+    }
+}
+
+nav {
+    a {
+        padding: .5em 2em .5em 2em;
+    }
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+}
+
+// class selector 
+
+
+
+// id selector
+
+

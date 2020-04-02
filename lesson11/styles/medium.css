@@ -19,6 +19,7 @@
     .navigation {
         flex-direction: row;
     }
+
     .navigation li:first-child{
         display: none;
     }
@@ -29,6 +30,7 @@
         align-items: center;
         height: 5em;
     }
+    
     /* id selectors  */
     #fiveday-forcast {
         max-width: 650px;

@@ -1,5 +1,13 @@
 import { getCurrentWeather } from './utilities.js';
 
+// Responsive menu js
+const hambutton = document.querySelector(".ham");
+hambutton.addEventListener("click", toggleMenu, false);
+
+function toggleMenu() {
+  document.querySelector(".navigation").classList.toggle("responsive");
+}
+
 
 // adding the temples to the temples page 
 fetch('json/temples.json')
@@ -7,8 +15,6 @@ fetch('json/temples.json')
        return response.json();
     })
     .then( response => {
-        console.log(response);
-
         response.templeList.forEach((temple, i) => {
             const templeInfo = document.createElement('article');
             
@@ -17,11 +23,21 @@ fetch('json/temples.json')
                 <section>
                     <h2>${temple.templeName} Summary</h2>
                     <img src="images/${temple.imageName}" alt="${temple.imageAlt}" class="templeImg">
+                </section>
+                <section class="info">
                     <div>
                         <h3>Contact Information</h3>
                         <p>Address: ${temple.streetLine1} ${temple.city}, ${temple.state} ${temple.zip} ${temple.country}</p>
                         <p>Phone: ${temple.telephone}</p>
                         <p>Email: ${temple.email}</p>
+                    </div>
+                    <div>
+                        <h3>Current Weather</h3>
+                        <img id="weatherIcon${i}" class="weatherIcon" src="" alt="" >
+                        <p>Current Conditions: <span id="weatherDesc${i}"></span></p>
+                        <p>Temperature: <span id="temp${i}"></span></p>
+                        <p>Wind Speed: <span id="windSpeed${i}"></span></p>
+                        <p id="windChillP${i}">Wind Chill: <span id="windChill${i}"></span></p>
                     </div>
                     <div>
                         <h3>Services</h3>
@@ -43,17 +59,7 @@ fetch('json/temples.json')
                     <div id="closureSchedule${i}">
                         <h3>Temple Closure Schecdule</h3>
                     </div>
-                </section>
-                <section>
-                    <h3>Current Weather</h3>
-                    <img id="weatherIcon${i}" class="weatherIcon" src="" alt="" >
-                    <p>Current Conditions: <span id="weatherDesc${i}"></span></p>
-                    <p>Temperature: <span id="temp${i}"></span></p>
-                    <p>Wind Speed: <span id="windSpeed${i}"></span></p>
-                    <p id="windChillP${i}">Wind Chill: <span id="windChill${i}"></span></p>
                 </section>`;
-            // check to see what is in templeInfo
-            console.log(templeInfo);
 
             //  adding the base temple info to the document
             document.querySelector('#content').appendChild(templeInfo);
