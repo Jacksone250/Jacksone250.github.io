@@ -102,6 +102,43 @@ main {
         margin: .5em;
         padding-left: .5em;
     }
+
+    iframe {
+        display: block;
+        margin: 1em auto;
+    }
+
+    ul {
+        list-style: none;
+
+        h4 {
+            display: inline;
+        }
+
+        p {
+            display: inline;
+        }
+    }
+
+    input, textarea {
+        border-radius: 5px;
+    }
+
+    input {
+        height: 1.75em;
+    }
+
+    form {
+        margin: 0 auto;
+        font-weight: bold;
+        padding: 1em;
+    }
+
+    form div {
+        padding: .2em;
+        display: grid;
+        text-align: start;
+    }
 }
 
 footer {
@@ -113,21 +150,13 @@ footer {
 
 // class selectors
 
-.templeImg {
-    display: block;
-    margin: 0 auto;
-    border: 3px solid white;
-    box-shadow: 0 0 7px black;
-}
 
-.weatherIcon {
-    margin: 0 3em;
-}
 
 // hidden class
 .hidden {
     display: none;
 }
+
 // responsive navigation styles
 .navigation li:first-child{
     display: block;
@@ -147,6 +176,12 @@ footer {
     border-left: 3px solid $black;
 }
 
+
 // id selectors
 
+// reservation link
 
+#submit, #reset {
+    height: 2em;
+    margin: .3em;
+}

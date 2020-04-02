@@ -466,9 +466,37 @@ main iframe {
   margin: 1em auto;
 }
 
-main img {
-  display: block;
+main ul {
+  list-style: none;
+}
+
+main ul h4 {
+  display: inline;
+}
+
+main ul p {
+  display: inline;
+}
+
+main input, main textarea {
+  border-radius: 5px;
+}
+
+main input {
+  height: 1.75em;
+}
+
+main form {
   margin: 0 auto;
+  font-weight: bold;
+  padding: 1em;
+}
+
+main form div {
+  padding: .2em;
+  display: -ms-grid;
+  display: grid;
+  text-align: start;
 }
 
 footer {
@@ -476,18 +504,6 @@ footer {
   color: white;
   text-align: center;
   padding: .5em;
-}
-
-.templeImg {
-  display: block;
-  margin: 0 auto;
-  border: 3px solid white;
-  -webkit-box-shadow: 0 0 7px black;
-          box-shadow: 0 0 7px black;
-}
-
-.weatherIcon {
-  margin: 0 3em;
 }
 
 .hidden {
@@ -511,18 +527,9 @@ footer {
   border-left: 3px solid #000000;
 }
 
-#callAction h2 {
-  text-align: center;
-  max-width: 6.2em;
-  margin: .5em auto;
-  padding: .75em 1.75em;
-  border-radius: 50px;
-  background-color: #E1EFE6;
-  color: #000000;
-  border-right: 5px solid #3A7CA5;
-  border-bottom: 5px solid #3A7CA5;
-  border-left: 5px solid #FFBC42;
-  border-top: 5px solid #FFBC42;
+#submit, #reset {
+  height: 2em;
+  margin: .3em;
 }
 
 @media only screen and (min-width: 32.5em) {
@@ -532,6 +539,9 @@ footer {
   }
   nav a {
     padding: .25em;
+  }
+  form {
+    max-width: 50%;
   }
   .navigation {
     -webkit-box-orient: horizontal;
@@ -555,18 +565,15 @@ footer {
             align-items: center;
     height: 2em;
   }
-  .info {
-    display: -ms-grid;
-    display: grid;
+  .submitReset {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+    justify-items: center;
   }
-  #callAction {
-    position: fixed;
-    top: 85%;
-    left: 67%;
-    font-weight: bolder;
-    text-align: left;
+  #submit, #reset {
+    height: 2em;
+    width: 8em;
+    margin: .3em;
   }
 }
 
@@ -588,8 +595,9 @@ footer {
   nav a {
     padding: .5em 2em .5em 2em;
   }
-  #callAction {
-    top: 85%;
-    left: 80%;
+  #submit, #reset {
+    height: 2em;
+    width: 10em;
+    margin: .3em;
   }
 }
