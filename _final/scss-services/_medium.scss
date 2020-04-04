@@ -33,6 +33,10 @@ nav {
     grid-template-columns: 1fr 1fr;
 }
 
+.servNav {
+    flex-direction: row;
+}
+
 // id selectors 
 
 #callAction {

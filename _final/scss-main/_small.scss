@@ -63,12 +63,14 @@ nav {
 
     li {
         margin: .1em;
-        background-color: $silver;
         width: 100%;
     }
 
     a {
+        display: block;
+        width: 100%;
         color: $black;
+        background-color: $silver;
     }
 
     a:visited {

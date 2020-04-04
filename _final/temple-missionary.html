@@ -20,47 +20,64 @@
     </header>
     <nav>
         <ul class="navigation">
-            <li><a href="#" class="ham">
-                    <div>&equiv; Menu</div>
-                </a></li>
-            <li><a href="index.html" class="lnk">
-                    <div>Home</div>
-                </a></li>
-            <li><a href="temple.html" class="lnk">
-                    <div>Temples</div>
-                </a></li>
-            <li><a href="reservation.html" class="lnk">
-                    <div>Reservation</div>
-                </a></li>
-            <li><a href="services.html" class="lnk">
-                    <div>Services</div>
-                </a></li>
-            <li><a href="contact.html" class="lnk">
-                    <div>Contact Us</div>
-                </a></li>
+            <li><a href="#" class="ham">&equiv; Menu</a></li>
+            <li><a href="index.html" class="lnk">Home</a></li>
+            <li><a href="temple.html" class="lnk">Temples</a></li>
+            <li><a href="reservation.html" class="lnk">Reservation</a></li>
+            <li><a href="services.html" class="lnk">Services</a></li>
+            <li><a href="contact.html" class="lnk">Contact Us</a></li>
         </ul>
     </nav>
     <main>
         <nav>
-            <ul>
-                <li><a href="reception.html">Wedding Reception Serivices</a></li>
-                <li class="active"><a href="temple-missionary.html">Full-time Temple Missionary Services</a></li>
+            <ul class="servNav">
+                <li><a href="reception.html">Wedding Serivices</a></li>
+                <li><a href="temple-missionary.html"  class="active">Temple Missionary</a></li>
             </ul>
         </nav>
         <section>
-            <h1>Free Amenities</h1>
+            <h1>Full-time Missionary Accomidation Amenities</h1>
             <ul>
-                <li>Breakfast</li>
-                <li>Exercise/workout room</li>
-                <li>Indoor pool</li>
+                <li>Kitchenette</li>
+                <li>Sperated Room</li>
                 <li>WiFi high-speed internet access and smart TVs</li>
-                <li>Parking</li>
                 <li>Temple shuttle</li>
                 <li>Family history consultation and family ordinance card service</li>
+                <li>Exercise/workout room</li>
+                <li>Indoor pool</li>
             </ul>
         </section>
         <section>
-            <h2>Contact Us</h2>
+            <h1>Suite Pictures</h1>
+            <div class="gallery">
+                <figure>
+                        <img src="./images/temple-missionary/suite-01.jpg" alt="suite-01">
+                    <figcaption>Nauvoo, Illinois Suite</figcaption>
+                </figure>
+                <figure>
+                    <img src="./images/temple-missionary/suite-02.jpg" alt="suite-02">
+                    <figcaption>Rexburg, Idaho Suite</figcaption>
+                </figure>
+                <figure>
+                    <img src="./images/temple-missionary/suite-03.jpg" alt="suite-03">
+                    <figcaption>Gilbert, Arizona Suite</figcaption>
+                </figure>
+                <figure>
+                    <img src="./images/temple-missionary/suite-04.jpg" alt="suite-04">
+                    <figcaption>Baton Rouge, Louisianna Suite</figcaption>
+                </figure>
+                <figure>
+                    <img src="./images/temple-missionary/suite-05.jpg" alt="suite-05">
+                    <figcaption>Washington D.C. Suite</figcaption>
+                </figure>
+                <figure>
+                    <img src="./images/temple-missionary/suite-06.jpg" alt="suite-06">
+                    <figcaption>Laie, Hawaii Suite</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section class="contact">
+            <h1>Contact Us</h1>
             <p>For more information and scheduling please contact us using the form or phone number below!</p>
             <ul>
                 <li><h4>Address:</h4> <p>4800 Montgomery Ln #300, Bethesda, MD 20814</p></li>
@@ -88,15 +105,6 @@
                     <input type="reset" value="Reset" id="reset">
                 </div>
             </form>
-        </section>
-        <section id="hero">
-            <picture id="hero-picture">
-                <source srcset="images/baton-rouge-louisiana-temple-400.jpeg" media="(max-width: 400px)">
-                <source srcset="images/baton-rouge-louisiana-temple-800.jpeg" media="(max-width: 800px)">
-                <source srcset="images/baton-rouge-louisiana-temple-1200.jpeg" media="(min-width: 801px)">
-                <img id="hero-image" src="images/baton-rouge-louisiana-temple-400.jpeg"
-                    alt="The Baton Rouge Louisiana Temple in the Evening">
-            </picture>
         </section>
     </main>
     <footer>

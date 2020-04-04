@@ -63,12 +63,14 @@ nav {
 
     li {
         margin: .1em;
-        background-color: $silver;
         width: 100%;
     }
 
     a {
+        display: block;
+        width: 100%;
         color: $black;
+        background-color: $silver;
     }
 
     a:visited {
@@ -103,6 +105,10 @@ main {
         font-size: 1.25em;
         margin: .5em;
         padding-left: .5em;
+    }
+
+    nav {
+        width: 100%;
     }
 
     img {
@@ -153,6 +159,23 @@ footer {
     border-left: 3px solid $black;
 }
 
+
+.servNav {
+    margin: .25em;
+    display: flex;
+    width: 100%;
+
+    li {
+        margin: .25em;
+        background-color: transparent;
+    }
+
+    a {
+        padding: .3em 1em;
+        background-color: $silver;
+        font-size: .75em;
+    }
+}
 
 // id selectors
 

@@ -419,12 +419,14 @@ nav ul {
 
 nav li {
   margin: .1em;
-  background-color: #BDD9BF;
   width: 100%;
 }
 
 nav a {
+  display: block;
+  width: 100%;
   color: #000000;
+  background-color: #BDD9BF;
 }
 
 nav a:visited {

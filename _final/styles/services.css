@@ -419,12 +419,14 @@ nav ul {
 
 nav li {
   margin: .1em;
-  background-color: #BDD9BF;
   width: 100%;
 }
 
 nav a {
+  display: block;
+  width: 100%;
   color: #000000;
+  background-color: #BDD9BF;
 }
 
 nav a:visited {
@@ -461,6 +463,10 @@ main p {
   font-size: 1.25em;
   margin: .5em;
   padding-left: .5em;
+}
+
+main nav {
+  width: 100%;
 }
 
 main img {
@@ -503,6 +509,25 @@ footer {
   border-left: 3px solid #000000;
 }
 
+.servNav {
+  margin: .25em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.servNav li {
+  margin: .25em;
+  background-color: transparent;
+}
+
+.servNav a {
+  padding: .3em 1em;
+  background-color: #BDD9BF;
+  font-size: .75em;
+}
+
 @media only screen and (min-width: 32.5em) {
   header {
     -ms-grid-columns: 1fr 2fr 1fr;
@@ -538,6 +563,12 @@ footer {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+  }
+  .servNav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   #callAction {
     position: fixed;

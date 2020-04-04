@@ -63,12 +63,14 @@ nav {
 
     li {
         margin: .1em;
-        background-color: $silver;
         width: 100%;
     }
 
     a {
+        display: block;
+        width: 100%;
         color: $black;
+        background-color: $silver;
     }
 
     a:visited {
@@ -114,7 +116,7 @@ main {
         background-color: $silver;
         margin: 1em auto;
         padding: 1em;
-        max-width: 40%;
+        max-width: 80%;
     }
 }
 
