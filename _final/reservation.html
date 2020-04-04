@@ -8,7 +8,6 @@
     <link rel="shortcut icon" href="images/logo_small.png">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/reservation.css">
-    <script src="scripts/reservation.js" defer type="module"></script>
 </head>
 
 <body>
@@ -42,12 +41,25 @@
                     <input type="email" id="email" name="email" placeholder="example@domain.com">
                 </div>
                 <div>
-                    <label for="subject">Subject:</label>
-                    <input id="subject" type="text" placeholder="Subject">
+                    <label for="phone">Phone: </label>
+                    <input type="number" id="phone" name="phone" placeholder="(000)000-0000">
                 </div>
                 <div>
-                    <label for="message">Message:</label>
-                    <textarea name="message" id="message" cols="50" rows="10" placeholder="Hello there!"></textarea>
+                    <label for="sstate">State/Country: </label>
+                    <input type="text" id="state" name="state" required placeholder="i.e. Idaho, Hawaii, Mexico">
+                </div>
+                <div>
+                    <label for="location">Accomidation Location:</label>
+                    <select name="location" id="location">
+                        <option value="rexburg">Rexburg, Idaho</option>
+                        <option value="gilbert">Gilbert, Arizona</option>
+                        <option value="laie">Laie, Hawaii</option>
+                        <option value="nauvoo">Nauvoo, Illinois</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="message">Special Comments:</label>
+                    <textarea name="message" id="message" cols="50" rows="5" placeholder="Hello there!"></textarea>
                 </div>
                 <div class="submitReset">
                     <input type="submit" value="Submit" id="submit">
@@ -55,14 +67,46 @@
                 </div>
             </form>
         </section>
+        <section>
+            <form>
+                <div id="ordinanceSelector">
+                    <input type="radio" id="Baptism" name="ordinance" value="Baptism">
+                    <label for="Baptism">Baptism</label><br>
+                    <input type="radio" id="Endowment" name="ordinance" value="Endowment">
+                    <label for="Endowment">Endowment</label><br>
+                    <input type="radio" id="Sealing" name="ordinance" value="Sealing">
+                    <label for="Sealing">Sealing</label>
+                </div>
+                <div id="locationSelector">
+                    <label for="location">Accomidation Location:</label>
+                    <select name="location" id="location">
+                        <option value="rexburg">Rexburg, Idaho</option>
+                        <option value="gilbert">Gilbert, Arizona</option>
+                        <option value="laie">Laie, Hawaii</option>
+                        <option value="nauvoo">Nauvoo, Illinois</option>
+                    </select>
+                </div>
+              </form> 
+        </section>
         <section id="calendar">
+            <h2>Month</h2>
+            <div>
+                <h4>day 1</h4>
+                <p>availbility slot 1</p>
+                <p>availbility slot 2</p>
+            </div>
+            <div>
+                <h4>day 2</h4>
+                <p>availbility slot 1</p>
+                <p>availbility slot 2</p>
+            </div>
         </section>
     </main>
     <footer>
         <p>Created by Ethan Jackson | CIT 230 | March 2020</p>
         <p>Last Updated: <span id="lastUpdateDate"></span></p>
     </footer>
-
+    <script src="scripts/reservation.js" type="module"></script>
 </body>
 
 </html>

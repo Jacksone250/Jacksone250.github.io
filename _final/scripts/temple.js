@@ -51,10 +51,10 @@ fetch('json/temples.json')
                     </div>
                     <div>
                         <h3>Ordinance Schedule</h3>
-                        <p>Baptism: ${temple.schedule.Baptism}</p>
-                        <p>Iniatory: ${temple.schedule.Iniatory}</p>
-                        <p>Endowment: ${temple.schedule.Endowment}</p>
-                        <p>Sealing: ${temple.schedule.Sealing}</p>
+                        <p><h4>Baptism:</h4> ${temple.schedule.Baptism}</p>
+                        <p><h4>Iniatory:</h4> ${temple.schedule.Iniatory}</p>
+                        <p><h4>Endowment:</h4> ${temple.schedule.Endowment}</p>
+                        <p><h4>Sealing:</h4> ${temple.schedule.Sealing}</p>
                     </div>
                     <div id="closureSchedule${i}">
                         <h3>Temple Closure Schecdule</h3>
