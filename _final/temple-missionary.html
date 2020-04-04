@@ -41,15 +41,53 @@
         </ul>
     </nav>
     <main>
+        <nav>
+            <ul>
+                <li><a href="reception.html">Wedding Reception Serivices</a></li>
+                <li class="active"><a href="temple-missionary.html">Full-time Temple Missionary Services</a></li>
+            </ul>
+        </nav>
         <section>
-            <h1>Thank you!</h1>
-            <div>
-                <p>Thank you!</p>
-                <p>We appreciate your message and will get back with you shortly!</p>
-                <br>
-                <p>Sincerely,</p>
-                <p>The Temple Inn & Suites Team</p>
-            </div>
+            <h1>Free Amenities</h1>
+            <ul>
+                <li>Breakfast</li>
+                <li>Exercise/workout room</li>
+                <li>Indoor pool</li>
+                <li>WiFi high-speed internet access and smart TVs</li>
+                <li>Parking</li>
+                <li>Temple shuttle</li>
+                <li>Family history consultation and family ordinance card service</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Contact Us</h2>
+            <p>For more information and scheduling please contact us using the form or phone number below!</p>
+            <ul>
+                <li><h4>Address:</h4> <p>4800 Montgomery Ln #300, Bethesda, MD 20814</p></li>
+                <li><h4>Phone:</h4> <p>(1)000-000-0000</p></li>
+            </ul>
+            <form action="thanks.html">
+                <div>
+                    <label for="fullName">Full Name: </label>
+                    <input type="text" id="fullName" name="fullName" required placeholder="John Smith">
+                </div>
+                <div>
+                    <label for="email">Email: </label>
+                    <input type="email" id="email" name="email" placeholder="example@domain.com">
+                </div>
+                <div>
+                    <label for="subject">Subject:</label>
+                    <input id="subject" type="text" placeholder="Subject">
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="message" cols="50" rows="10" placeholder="Hello there!"></textarea>
+                </div>
+                <div class="submitReset">
+                    <input type="submit" value="Submit" id="submit">
+                    <input type="reset" value="Reset" id="reset">
+                </div>
+            </form>
         </section>
         <section id="hero">
             <picture id="hero-picture">

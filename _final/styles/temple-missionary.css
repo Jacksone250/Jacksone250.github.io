@@ -468,11 +468,37 @@ main img {
   margin: 3em auto;
 }
 
-main div {
-  background-color: #BDD9BF;
-  margin: 1em auto;
+main ul {
+  list-style: none;
+}
+
+main ul h4 {
+  display: inline;
+}
+
+main ul p {
+  display: inline;
+}
+
+main input, main textarea {
+  border-radius: 5px;
+}
+
+main input {
+  height: 1.75em;
+}
+
+main form {
+  margin: 0 auto;
+  font-weight: bold;
   padding: 1em;
-  max-width: 40%;
+}
+
+main form div {
+  padding: .2em;
+  display: -ms-grid;
+  display: grid;
+  text-align: start;
 }
 
 footer {
@@ -503,6 +529,11 @@ footer {
   border-left: 3px solid #000000;
 }
 
+#submit, #reset {
+  height: 2em;
+  margin: .3em;
+}
+
 @media only screen and (min-width: 32.5em) {
   header {
     -ms-grid-columns: 1fr 2fr 1fr;
@@ -510,6 +541,9 @@ footer {
   }
   nav a {
     padding: .25em;
+  }
+  form {
+    max-width: 50%;
   }
   .navigation {
     -webkit-box-orient: horizontal;
@@ -539,12 +573,15 @@ footer {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
-  #callAction {
-    position: fixed;
-    top: 85%;
-    left: 67%;
-    font-weight: bolder;
-    text-align: left;
+  .submitReset {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+  #submit, #reset {
+    height: 2em;
+    width: 8em;
+    margin: .3em;
   }
 }
 
@@ -566,8 +603,9 @@ footer {
   nav a {
     padding: .5em 2em .5em 2em;
   }
-  #callAction {
-    top: 85%;
-    left: 80%;
+  #submit, #reset {
+    height: 2em;
+    width: 10em;
+    margin: .3em;
   }
 }

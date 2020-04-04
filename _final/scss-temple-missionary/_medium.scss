@@ -10,6 +10,10 @@ nav {
     }
 }
 
+form {
+    max-width: 50%;
+}
+
 // class selectors
 
 // responsive nav styles
@@ -33,12 +37,15 @@ nav {
     grid-template-columns: 1fr 1fr;
 }
 
+.submitReset {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
 // id selectors 
 
-#callAction {
-    position: fixed;
-    top: 85%;
-    left: 67%;
-    font-weight: bolder;
-    text-align: left;
+#submit, #reset {
+    height: 2em;
+    width: 8em;
+    margin: .3em;
 }

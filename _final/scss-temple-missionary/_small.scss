@@ -110,11 +110,36 @@ main {
         margin: 3em auto;
     }
 
-    div {
-        background-color: $silver;
-        margin: 1em auto;
+    ul {
+        list-style: none;
+
+        h4 {
+            display: inline;
+        }
+
+        p {
+            display: inline;
+        }
+    }
+
+    input, textarea {
+        border-radius: 5px;
+    }
+
+    input {
+        height: 1.75em;
+    }
+
+    form {
+        margin: 0 auto;
+        font-weight: bold;
         padding: 1em;
-        max-width: 40%;
+    }
+
+    form div {
+        padding: .2em;
+        display: grid;
+        text-align: start;
     }
 }
 
@@ -157,5 +182,8 @@ footer {
 // id selectors
 
 // reservation link
-
+#submit, #reset {
+    height: 2em;
+    margin: .3em;
+}
 
