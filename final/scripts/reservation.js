@@ -1,3 +1,5 @@
+import { readFromLS, writeToLS } from './utilities';
+
 // Responsive menu js
 const hambutton = document.querySelector(".ham");
 hambutton.addEventListener("click", toggleMenu, false);
@@ -46,6 +48,8 @@ fullDate = day + ', ' + dayOfMonth + ' ' + month + ' ' + year;
 
 // selects the calendar section for use throughout the dynamic build
 const calendar = document.getElementById('calendar');
+const startday = document.getElementById('startday');
+const endday = document.getElementById('endday');
 
 let startDate = new Date(year, currentDate.getMonth(), 1);
 const endDate = new Date(year, currentDate.getMonth() + 1, 1);
@@ -58,8 +62,6 @@ let startEndCounter = 0;
 
 // populates the endadate select list
 function populateEndDate() {
-  let endday = document.getElementById('endday');
-  let startday = document.getElementById('startday');
   let start = 1;
 
   startday.childNodes.forEach((option, i) => {
@@ -85,6 +87,43 @@ function populateEndDate() {
   }
 }
 
+function setFirstHighlightedDay() {
+  
+  calendar.childNodes.forEach((day) => {
+    if (day.classList.contains('firstDay')){
+      day.classList.remove('firstDay')
+    } else if (day.getAttribute('data-day') === startday.selectedOptions[0].getAttribute('value')){
+      day.classList.add('firstDay')
+    }
+  })
+}
+
+function setLastHighlightedDay(){
+
+  calendar.childNodes.forEach((day) => {
+    if (day.classList.contains('lastDay')){
+      day.classList.remove('lastDay')
+    } else if (day.getAttribute('data-day') === endday.selectedOptions[0].getAttribute('value')){
+      day.classList.add('lastDay')
+    }
+  })
+}
+
+function setMiddleHighlightedDays(){
+
+  calendar.childNodes.forEach(day => {
+    if (parseInt(day.getAttribute('data-day')) > parseInt(startday.selectedOptions[0].getAttribute('value')) 
+        && parseInt(day.getAttribute('data-day')) < parseInt(endday.selectedOptions[0].getAttribute('value'))){
+      day.classList.add('middleDays')
+    } else if(day.classList.contains('middleDays')){
+      day.classList.remove('middleDays')
+    }
+  })
+}
+
+  
+
+
 
 function createCalendar() {
   //   // adding the month to the calendar
@@ -104,19 +143,23 @@ function createCalendar() {
     day.setAttribute("class", "day");
     day.setAttribute("data-day", startDate.getDate());
     day.innerHTML = `<h4>${daysOfWeek[startDate.getDay()]}, ${startDate.getDate()}</h4>`;
-    day.addEventListener('click', (e) => {
 
-      let startday = document.getElementById('startday');
-      let endday = document.getElementById('endday');
-      let calendar = document.getElementById('calendar');
+    // adding an event listener to each day in the calendar
+    day.addEventListener('click', (e) => {
+      // gets the target element
       let target = e.target;
+
+      // makes sure that the correct element is selectet no matter what is hit within the day
       if (target.nodeName === "H4"){
         target = target.parentNode;
       }
+
+      // gets the attribute data-day for the use of comparison
       let selectStartDay = target.getAttribute("data-day");
 
+      // Controls whether the first day is going to be moved or the second day
+      // will be moved alternating on even and odd clicks
       if (startEndCounter % 2 === 0){
-        
         // controlling which elements are selected
         startday.childNodes.forEach((option, i) => {
           if (i !== 0){
@@ -128,16 +171,7 @@ function createCalendar() {
             }
           }
         })
-
-        calendar.childNodes.forEach((day) => {
-          if (day.classList.contains('firstDay')){
-            day.classList.remove('firstDay')
-          } else if (day.getAttribute('data-day') === selectStartDay){
-            day.classList.add('firstDay')
-          }
-        })
-
-        console.log(startday.selectedOptions[0]);
+        setFirstHighlightedDay();
         // incrementing counter to trigger end day move
         startEndCounter++;
       } else if (startEndCounter % 2 === 1){
@@ -152,30 +186,12 @@ function createCalendar() {
             }
           }
         })
-
-        calendar.childNodes.forEach((day) => {
-          if (day.classList.contains('lastDay')){
-            day.classList.remove('lastDay')
-          } else if (day.getAttribute('data-day') === selectStartDay){
-            day.classList.add('lastDay')
-          }
-        })
-
+        setLastHighlightedDay();
         // incrementing counter to trigger start day move
         startEndCounter++;
       }
 
-      calendar.childNodes.forEach(day => {
-        if (parseInt(day.getAttribute('data-day')) > parseInt(startday.selectedOptions[0].getAttribute('value')) 
-            && parseInt(day.getAttribute('data-day')) < parseInt(endday.selectedOptions[0].getAttribute('value'))){
-          day.classList.add('middleDays')
-        } else if(day.classList.contains('middleDays')){
-          day.classList.remove('middleDays')
-        }
-      })
-
-      
-
+      setMiddleHighlightedDays();
       
       // rebuilds the endDate select list
       // populateEndDate();
@@ -202,23 +218,40 @@ function createCalendar() {
   }
 }
 
-
-
-
+// creates the calendar to be used
+createCalendar();
+// populates the end day select lists options
 populateEndDate();
 
-let startday = document.getElementById('startday');
+// highlights the default selected days
+setFirstHighlightedDay();
+setMiddleHighlightedDays();
+setLastHighlightedDay();
+
+// watchs for changes at the beginning of the form when the select statements are run
 startday.addEventListener('change', (e) => {
-  endday.innerHTML = ``;
-
-  let endDateStart = new Date(year, currentDate.getMonth(), parseInt(e.target.value) + 1)
-
-  for (endDateStart; endDateStart < endDate; endDateStart.setDate( endDateStart.getDate() + 1)) {
-    let option = document.createElement('option');
-    option.setAttribute('value', endDateStart.getDate());
-    option.innerHTML = `${month}, ${endDateStart.getDate()}`;
-    endday.appendChild(option);
+  // check to see if the startday is after the endday
+  if (parseInt(startday.selectedOptions[0].getAttribute('value')) >= parseInt(endday.selectedOptions[0].getAttribute('value'))) {
+    // clears out the current options list so that it can be regenerated
+    endday.innerHTML = ``;
+    // gets the first availible day after the the startdate
+    let endDateStart = new Date(year, currentDate.getMonth(), parseInt(e.target.value) + 1);
+    // loops through the possible options for an endday and adds them to the endday select options
+    for (endDateStart; endDateStart < endDate; endDateStart.setDate( endDateStart.getDate() + 1)) {
+      let option = document.createElement('option');
+      option.setAttribute('value', endDateStart.getDate());
+      option.innerHTML = `${month}, ${endDateStart.getDate()}`;
+      endday.appendChild(option);
+    }
   }
+  setFirstHighlightedDay();
+  setMiddleHighlightedDays();
+})
+
+// watches for changes to the beginning of the for for the end day
+endday.addEventListener('change', (e) => {
+  setLastHighlightedDay();
+  setMiddleHighlightedDays();
 })
 
 
@@ -228,12 +261,66 @@ startday.addEventListener('change', (e) => {
 
 
 
-// This loop loops through the Month and creates the days with the 
-// day name and day of the month number
 
 
 
+/**************************************************************************************
+END OF:   Calendar Section for building and rebuilding upon user input
+*/
 
+
+
+/**************************************************************************************
+Diagnostics: code used to diagnose what it happening within the scope of this file
+*/
+
+// console.log(document.body.contains(document.getElementById('formRequest')))
+// console.log(document.body.contains(document.getElementById('calendar')))
+// document.body.addEventListener("click", (e)=>{
+//   console.log(document.body.contains(document.getElementById('formRequest')))
+// })
+
+/**************************************************************************************
+END OF: Diagnostics: code used to diagnose what it happening within the scope of this file
+*/
+
+
+/**************************************************************************************
+DUMP: Code that is not being used and is no longer needed but may be reintroduced 
+        or canabalized for other use
+*/
+
+  // This fetch grabs the information from a local JSON file 
+  // and displays it to the user dynamically
+  //   fetch('json/temples.json')
+  //     .then(response => {
+  //       return response.json();
+  //     })
+  //     .then(response => {
+  //       // selecting the ordinances time slots
+  //       const ordinanceTimes = response.templeList[0].liveOrdinanceSchedule[ordinanceSelected];
+
+  //       // This loop loops through the Month and creates the days with the 
+  //       // day name and day of the month number
+  //       for (startDate; startDate < endDate; startDate.setDate(startDate.getDate() + 1)) {
+  //         let day = document.createElement('div');
+  //         day.innerHTML = `<h4>${daysOfWeek[startDate.getDay()]}, ${startDate.getDate()}</h4>`;
+  //         // This loops through events for the given day
+  //         ordinanceTimes[startDate.getDay()].forEach(event => {
+  //           // creating an element for 
+  //           const eventElement = document.createElement('div');
+  //           eventElement.setAttribute("class","times");
+  //           // building each individual event availibility
+  //           eventElement.innerHTML = `${event}`;
+  //           day.appendChild(eventElement);
+  //         });
+  //         // adds the day elements to the calendar
+  //         calendar.appendChild(day);
+  //       }
+
+  //       // resets startDate 
+  //       startDate = new Date(year, currentDate.getMonth(), 1);
+  //     })
 
 
 //  adjusts the time availibility per ordinance 
@@ -281,52 +368,12 @@ startday.addEventListener('change', (e) => {
 //   e.target.append(form);
 // })
 
-createCalendar();
 
 /**************************************************************************************
-END OF:   Calendar Section for building and rebuilding upon user input
+END OF: DUMP: Code that is not being used and is no longer needed but may be reintroduced 
+              or canabalized for other use
 */
 
-//diagnostics
-// console.log(document.body.contains(document.getElementById('formRequest')))
-// console.log(document.body.contains(document.getElementById('calendar')))
-// document.body.addEventListener("click", (e)=>{
-//   console.log(document.body.contains(document.getElementById('formRequest')))
-// })
 
 
-/**************************************************************************************
-DUMP: Code that is not being used and is no longer needed but may be reintroduced or canabalized for other use
-*/
 
-  // This fetch grabs the information from a local JSON file 
-  // and displays it to the user dynamically
-  //   fetch('json/temples.json')
-  //     .then(response => {
-  //       return response.json();
-  //     })
-  //     .then(response => {
-  //       // selecting the ordinances time slots
-  //       const ordinanceTimes = response.templeList[0].liveOrdinanceSchedule[ordinanceSelected];
-
-  //       // This loop loops through the Month and creates the days with the 
-  //       // day name and day of the month number
-  //       for (startDate; startDate < endDate; startDate.setDate(startDate.getDate() + 1)) {
-  //         let day = document.createElement('div');
-  //         day.innerHTML = `<h4>${daysOfWeek[startDate.getDay()]}, ${startDate.getDate()}</h4>`;
-  //         // This loops through events for the given day
-  //         ordinanceTimes[startDate.getDay()].forEach(event => {
-  //           // creating an element for 
-  //           const eventElement = document.createElement('div');
-  //           eventElement.setAttribute("class","times");
-  //           // building each individual event availibility
-  //           eventElement.innerHTML = `${event}`;
-  //           day.appendChild(eventElement);
-  //         });
-  //         // adds the day elements to the calendar
-  //         calendar.appendChild(day);
-  //       }
-
-  //       // resets startDate 
-  //       startDate = new Date(year, currentDate.getMonth(), 1);
-  //     })
