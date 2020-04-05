@@ -523,7 +523,6 @@ footer {
 }
 
 .servNav a {
-  padding: .3em 1em;
   background-color: #BDD9BF;
   font-size: .75em;
 }
@@ -593,12 +592,5 @@ footer {
     -ms-grid-column: 3;
     -ms-grid-column-span: 1;
     grid-column: 3/4;
-  }
-  nav a {
-    padding: .5em 2em .5em 2em;
-  }
-  #callAction {
-    top: 85%;
-    left: 80%;
   }
 }
