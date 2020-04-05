@@ -50,9 +50,41 @@ const calendar = document.getElementById('calendar');
 let startDate = new Date(year, currentDate.getMonth(), 1);
 const endDate = new Date(year, currentDate.getMonth() + 1, 1);
 
+let startEndCounter = 0;
+
 // variable that will be changed when the radio button is selected 
 // allowing the calendar to be rebuilt
 // let ordinanceSelected = "Baptism";
+
+// populates the endadate select list
+function populateEndDate() {
+  let endday = document.getElementById('endday');
+  let startday = document.getElementById('startday');
+  let start = 1;
+
+  startday.childNodes.forEach((option, i) => {
+    if(i != 0){
+      if(option.hasAttribute('selected')){
+        start = parseInt(option.getAttribute('value'));
+      }
+    }
+  })
+  
+  // clears out previously selected items
+  endday.innerHTML = ``;
+
+  // creates a starting date for the possible last day
+  let endDateStart = new Date(year, currentDate.getMonth(), start + 1);
+
+  // loops through the possible enddates and adds them as options to the list 
+  for (endDateStart; endDateStart < endDate; endDateStart.setDate( endDateStart.getDate() + 1)) {
+    let option = document.createElement('option');
+    option.setAttribute('value', endDateStart.getDate());
+    option.innerHTML = `${month}, ${endDateStart.getDate()}`;
+    endday.appendChild(option);
+  }
+}
+
 
 function createCalendar() {
   //   // adding the month to the calendar
@@ -62,42 +94,91 @@ function createCalendar() {
   for (let padDay = 0; padDay < 6 - startDate.getDay(); padDay++){
     let day = document.createElement('div');
     day.setAttribute("class", "padDays");
-    day.innerHTML = `<h4>pad</h4>`;
+    day.innerHTML = `<h4></h4>`;
     calendar.appendChild(day);
   }
 
-  console.log(startday);
-  console.log(startday.selectedIndex);
-  console.log(startday.selectedOptions);
-  console.log(startday.selectedOptions.HTMLCollection);
-  console.log(startday.childNodes);
-
+  // loops through the beginning of one month and prints out the days
   for (startDate; startDate < endDate; startDate.setDate(startDate.getDate() + 1)) {
     let day = document.createElement('div');
     day.setAttribute("class", "day");
     day.setAttribute("data-day", startDate.getDate());
     day.innerHTML = `<h4>${daysOfWeek[startDate.getDay()]}, ${startDate.getDate()}</h4>`;
     day.addEventListener('click', (e) => {
+
       let startday = document.getElementById('startday');
+      let endday = document.getElementById('endday');
+      let calendar = document.getElementById('calendar');
       let target = e.target;
       if (target.nodeName === "H4"){
         target = target.parentNode;
       }
       let selectStartDay = target.getAttribute("data-day");
 
-      startday.childNodes.forEach((option, i) => {
-
-        if (i !== 0){
-          // console.log(option.getAttribute('value'));
-          if(option.getAttribute('value') === (selectStartDay)){
-            option.setAttribute('selected', 'true');
-          }else{
-            option.removeAttribute('selected');
+      if (startEndCounter % 2 === 0){
+        
+        // controlling which elements are selected
+        startday.childNodes.forEach((option, i) => {
+          if (i !== 0){
+            // console.log(option.getAttribute('value'));
+            if(option.getAttribute('value') === selectStartDay){
+              option.setAttribute('selected', 'true');
+            }else{
+              option.removeAttribute('selected');
+            }
           }
+        })
+
+        calendar.childNodes.forEach((day) => {
+          if (day.classList.contains('firstDay')){
+            day.classList.remove('firstDay')
+          } else if (day.getAttribute('data-day') === selectStartDay){
+            day.classList.add('firstDay')
+          }
+        })
+
+        console.log(startday.selectedOptions[0]);
+        // incrementing counter to trigger end day move
+        startEndCounter++;
+      } else if (startEndCounter % 2 === 1){
+        // controlling which elements are selected
+        endday.childNodes.forEach((option, i) => {
+          if (i !== 0){
+            // console.log(option.getAttribute('value'));
+            if(option.getAttribute('value') === selectStartDay){
+              option.setAttribute('selected', 'true');
+            }else{
+              option.removeAttribute('selected');
+            }
+          }
+        })
+
+        calendar.childNodes.forEach((day) => {
+          if (day.classList.contains('lastDay')){
+            day.classList.remove('lastDay')
+          } else if (day.getAttribute('data-day') === selectStartDay){
+            day.classList.add('lastDay')
+          }
+        })
+
+        // incrementing counter to trigger start day move
+        startEndCounter++;
+      }
+
+      calendar.childNodes.forEach(day => {
+        if (parseInt(day.getAttribute('data-day')) > parseInt(startday.selectedOptions[0].getAttribute('value')) 
+            && parseInt(day.getAttribute('data-day')) < parseInt(endday.selectedOptions[0].getAttribute('value'))){
+          day.classList.add('middleDays')
+        } else if(day.classList.contains('middleDays')){
+          day.classList.remove('middleDays')
         }
-      });
+      })
+
+      
+
+      
       // rebuilds the endDate select list
-      populateEndDate();
+      // populateEndDate();
     })
     // adds the day elements to the calendar
     calendar.appendChild(day);
@@ -121,23 +202,7 @@ function createCalendar() {
   }
 }
 
-// populates the endadate select list
-function populateEndDate() {
-  let endday = document.getElementById('endday');
-  let startday = document.getElementById('startday');
 
-  let start = 1;
-
-  endday.innerHTML = ``;
-  let endDateStart = new Date(year, currentDate.getMonth(), start + 1);
-
-  for (endDateStart; endDateStart < endDate; endDateStart.setDate( endDateStart.getDate() + 1)) {
-    let option = document.createElement('option');
-    option.setAttribute('value', endDateStart.getDate());
-    option.innerHTML = `${month}, ${endDateStart.getDate()}`;
-    endday.appendChild(option);
-  }
-}
 
 
 populateEndDate();
@@ -155,8 +220,6 @@ startday.addEventListener('change', (e) => {
     endday.appendChild(option);
   }
 })
-
-
 
 
 
