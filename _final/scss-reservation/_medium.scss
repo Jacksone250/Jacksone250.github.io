@@ -37,6 +37,22 @@ form {
     justify-items: center;
 }
 
+.day, .padDays {
+    display: block;
+    float: left;
+    width: 13%;
+
+    border: 1px solid black;
+    margin: 2px;
+    padding: 20px 0;
+}
+
+.endOfWeek {
+    width: 100%; 
+    clear: both;
+    float: none;
+}
+
 // id selectors 
 
 #submit, #reset {

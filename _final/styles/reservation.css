@@ -529,6 +529,10 @@ footer {
   border-left: 3px solid #000000;
 }
 
+.padDays {
+  display: none;
+}
+
 #submit, #reset {
   height: 2em;
   margin: .3em;
@@ -571,6 +575,19 @@ footer {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     justify-items: center;
+  }
+  .day, .padDays {
+    display: block;
+    float: left;
+    width: 13%;
+    border: 1px solid black;
+    margin: 2px;
+    padding: 20px 0;
+  }
+  .endOfWeek {
+    width: 100%;
+    clear: both;
+    float: none;
   }
   #submit, #reset {
     height: 2em;

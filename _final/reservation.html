@@ -33,6 +33,16 @@
             <h2>Reservation</h2>
             <form action="thanks.html">
                 <div>
+                    <label for="startday">Start Day:</label>
+                    <select name="startday" id="startday" required>
+                    </select>
+                </div>
+                <div>
+                    <label for="endday">End Day:</label>
+                    <select name="endday" id="endday" required>
+                    </select>
+                </div>
+                <div>
                     <label for="fullName">Full Name: </label>
                     <input type="text" id="fullName" name="fullName" required placeholder="John Smith">
                 </div>
@@ -45,7 +55,7 @@
                     <input type="number" id="phone" name="phone" placeholder="(000)000-0000">
                 </div>
                 <div>
-                    <label for="sstate">State/Country: </label>
+                    <label for="state">State/Country: </label>
                     <input type="text" id="state" name="state" required placeholder="i.e. Idaho, Hawaii, Mexico">
                 </div>
                 <div>
@@ -68,7 +78,7 @@
             </form>
         </section>
         <section>
-            <form>
+            <!-- <form>
                 <div id="ordinanceSelector">
                     <input type="radio" id="Baptism" name="ordinance" value="Baptism">
                     <label for="Baptism">Baptism</label><br>
@@ -86,7 +96,7 @@
                         <option value="nauvoo">Nauvoo, Illinois</option>
                     </select>
                 </div>
-              </form> 
+              </form>  -->
         </section>
         <section id="calendar">
             <h2>Month</h2>
