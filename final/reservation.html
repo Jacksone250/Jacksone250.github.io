@@ -44,7 +44,8 @@
         </section>
         <section>
             <h2>Reservation</h2>
-            <form action="thanks.html">
+            <!-- I removed action="thanks.html" -->
+            <form>
                 <div>
                     <label for="startday">Start Day:</label>
                     <select name="startday" id="startday" required>
@@ -57,15 +58,15 @@
                 </div>
                 <div>
                     <label for="fullName">Full Name: </label>
-                    <input type="text" id="fullName" name="fullName" required placeholder="John Smith">
+                    <input type="text" id="fullName" name="fullName" placeholder="John Smith" required>
                 </div>
                 <div>
                     <label for="email">Email: </label>
-                    <input type="email" id="email" name="email" placeholder="example@domain.com">
+                    <input type="email" id="email" name="email" placeholder="example@domain.com" required>
                 </div>
                 <div>
                     <label for="phone">Phone: </label>
-                    <input type="number" id="phone" name="phone" placeholder="(000)000-0000">
+                    <input type="number" id="phone" name="phone" placeholder="(000)000-0000" required>
                 </div>
                 <div>
                     <label for="state">State/Country: </label>
@@ -73,7 +74,8 @@
                 </div>
                 <div>
                     <label for="location">Accomidation Location:</label>
-                    <select name="location" id="location">
+                    <select name="location" id="location" required>
+                        <option value="" selected disabled>Select Location</option>
                         <option value="rexburg">Rexburg, Idaho</option>
                         <option value="gilbert">Gilbert, Arizona</option>
                         <option value="laie">Laie, Hawaii</option>
@@ -90,7 +92,7 @@
                 </div>
             </form>
         </section>
-        <section>
+        <section id="reservations">
             <h2>Previous Reservations</h2>
         </section>
     </main>

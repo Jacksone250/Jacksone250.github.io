@@ -1,4 +1,4 @@
-import { readFromLS, writeToLS } from './utilities';
+import { readFromLS, writeToLS } from './utilities.js';
 
 // Responsive menu js
 const hambutton = document.querySelector(".ham");
@@ -48,17 +48,17 @@ fullDate = day + ', ' + dayOfMonth + ' ' + month + ' ' + year;
 
 // selects the calendar section for use throughout the dynamic build
 const calendar = document.getElementById('calendar');
+
+//selecting both of the select lists that will be used throughout the code 
 const startday = document.getElementById('startday');
 const endday = document.getElementById('endday');
 
+// start and end of the month
 let startDate = new Date(year, currentDate.getMonth(), 1);
 const endDate = new Date(year, currentDate.getMonth() + 1, 1);
 
+// counter to alternate between adjusting the start and end day of the calendar
 let startEndCounter = 0;
-
-// variable that will be changed when the radio button is selected 
-// allowing the calendar to be rebuilt
-// let ordinanceSelected = "Baptism";
 
 // populates the endadate select list
 function populateEndDate() {
@@ -87,8 +87,9 @@ function populateEndDate() {
   }
 }
 
+// highlights the first day
 function setFirstHighlightedDay() {
-  
+  // loops throught the calendar days and adds or removes the class firstDay to appropriate element
   calendar.childNodes.forEach((day) => {
     if (day.classList.contains('firstDay')){
       day.classList.remove('firstDay')
@@ -98,8 +99,9 @@ function setFirstHighlightedDay() {
   })
 }
 
+// highlights the last day
 function setLastHighlightedDay(){
-
+  // loops throught the calendar days and adds or removes the class lastDay to appropriate element
   calendar.childNodes.forEach((day) => {
     if (day.classList.contains('lastDay')){
       day.classList.remove('lastDay')
@@ -109,8 +111,9 @@ function setLastHighlightedDay(){
   })
 }
 
+// highlights the days between the the first and last day
 function setMiddleHighlightedDays(){
-
+  // loops throught the calendar days and adds or removes the class middleDays to appropriate elements
   calendar.childNodes.forEach(day => {
     if (parseInt(day.getAttribute('data-day')) > parseInt(startday.selectedOptions[0].getAttribute('value')) 
         && parseInt(day.getAttribute('data-day')) < parseInt(endday.selectedOptions[0].getAttribute('value'))){
@@ -124,9 +127,10 @@ function setMiddleHighlightedDays(){
   
 
 
-
+// creates the calendar and adds the appropriate information to each day 
+//   as well as adding the appropriate event listeners to each day
 function createCalendar() {
-  //   // adding the month to the calendar
+  // adding the month to the calendar
   calendar.innerHTML = `<h2>${month}</h2>`;
 
   // adding pad days
@@ -160,10 +164,9 @@ function createCalendar() {
       // Controls whether the first day is going to be moved or the second day
       // will be moved alternating on even and odd clicks
       if (startEndCounter % 2 === 0){
-        // controlling which elements are selected
+        // controlling which elements are selected by adding or removing the selected attribute
         startday.childNodes.forEach((option, i) => {
           if (i !== 0){
-            // console.log(option.getAttribute('value'));
             if(option.getAttribute('value') === selectStartDay){
               option.setAttribute('selected', 'true');
             }else{
@@ -175,10 +178,9 @@ function createCalendar() {
         // incrementing counter to trigger end day move
         startEndCounter++;
       } else if (startEndCounter % 2 === 1){
-        // controlling which elements are selected
+        // controlling which elements are selected by adding or removing the selected attribute
         endday.childNodes.forEach((option, i) => {
           if (i !== 0){
-            // console.log(option.getAttribute('value'));
             if(option.getAttribute('value') === selectStartDay){
               option.setAttribute('selected', 'true');
             }else{
@@ -190,7 +192,7 @@ function createCalendar() {
         // incrementing counter to trigger start day move
         startEndCounter++;
       }
-
+      // adjusts the middle days appropriately
       setMiddleHighlightedDays();
       
       // rebuilds the endDate select list
@@ -256,17 +258,96 @@ endday.addEventListener('change', (e) => {
 
 
 
-
-
-
-
-
+/**************************************************************************************
+END OF:   Calendar Section for building and rebuilding upon user input
+*/
 
 
 
 /**************************************************************************************
-END OF:   Calendar Section for building and rebuilding upon user input
+Form saving and loading into previous reservations
 */
+
+// form variables 
+
+// start and end day NOTE: Were declared above and will be used here as well 
+
+// Name 
+const fullName = document.getElementById('fullName');
+// Email 
+const email = document.getElementById('email');
+// Phone number
+const phone = document.getElementById('phone');
+// State 
+const state = document.getElementById('state');
+// Location 
+const location = document.getElementById('location');
+// Special Comments 
+const message = document.getElementById('message');
+
+
+// Saving form
+
+// Saving the Form with a key 
+
+document.getElementById('submit').addEventListener('click', (e) => {
+  e.preventDefault();
+  // Object to be saved locally
+  const reservation = {
+    startday: startday.selectedOptions[0].getAttribute('value'),
+    endday: endday.selectedOptions[0].getAttribute('value'),
+    fullname: fullName.value, 
+    email: email.value,
+    phone: phone.value,
+    state: state.value,
+    location: location.value, 
+    message: message.value
+  };
+  writeToLS("item", reservation);
+
+  // object that will hold the retrieved data 
+  let reservations;
+
+  // creating an HTML element with the appropriate information
+  reservations = readFromLS('item');
+
+  let reserveElement = document.createElement('div');
+
+  reserveElement.innerHTML = `
+  <h4>For: ${reservations.fullname}</h4>
+    <ul>
+        <li>First Day: ${reservations.startday}</li>
+        <li>Last Day: ${reservations.endday}</li>
+        <li>Email: ${reservations.email}</li>
+        <li>Phone: ${reservations.phone}</li>
+        <li>State: ${reservations.state}</li>
+        <li>Location: ${reservations.location}</li>
+        <li>Special Notes: ${reservations.message}</li>
+    </ul>
+  `;
+
+  document.getElementById('reservations').appendChild(reserveElement);
+
+})
+
+
+// Loading form into previous
+
+
+
+// loading the object into the section previous reservations
+
+
+
+/**************************************************************************************
+END OF:   Form saving and loading into previous reservations
+*/
+
+
+
+
+
+
 
 
 
