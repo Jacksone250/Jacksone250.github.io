@@ -311,8 +311,10 @@ document.getElementById('submit').addEventListener('click', (e) => {
   // creating an HTML element with the appropriate information
   reservations = readFromLS('item');
 
+  // Loading form into previous
   let reserveElement = document.createElement('div');
 
+  // loading the object into the section previous reservations
   reserveElement.innerHTML = `
   <h4>For: ${reservations.fullname}</h4>
     <ul>
@@ -329,14 +331,6 @@ document.getElementById('submit').addEventListener('click', (e) => {
   document.getElementById('reservations').appendChild(reserveElement);
 
 })
-
-
-// Loading form into previous
-
-
-
-// loading the object into the section previous reservations
-
 
 
 /**************************************************************************************
