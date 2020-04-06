@@ -626,6 +626,15 @@ footer {
     -ms-grid-column-span: 1;
     grid-column: 3/4;
   }
+  nav a {
+    width: 90%;
+  }
+  .lnk:hover {
+    -webkit-transition: all ease-in-out 350ms;
+    transition: all ease-in-out 350ms;
+    -webkit-transform: translateY(5px) scale(105%);
+            transform: translateY(5px) scale(105%);
+  }
   #submit, #reset {
     height: 2em;
     width: 10em;

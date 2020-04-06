@@ -12,9 +12,18 @@ header {
     }
 }
 
+nav {
+    a {
+        width: 90%;
+    }
+}
+
 // class selector 
 
-
+.lnk:hover {
+    transition: all ease-in-out 350ms;
+    transform: translateY(5px) scale(105%);
+}
 
 // id selector
 
