@@ -533,6 +533,27 @@ footer {
   display: none;
 }
 
+.day {
+  padding: .5em 0em;
+  text-align: center;
+}
+
+.day h4 {
+  margin: .2em;
+}
+
+.firstDay {
+  background-color: #3A7CA5;
+}
+
+.middleDays {
+  background-color: #BDD9BF;
+}
+
+.lastDay {
+  background-color: #3A7CA5;
+}
+
 #submit, #reset {
   height: 2em;
   margin: .3em;

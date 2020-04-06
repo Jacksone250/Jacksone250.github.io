@@ -178,11 +178,31 @@ footer {
     border-left: 3px solid $black;
 }
 
+// calendar css
 .padDays {
     display: none;
 }
 
-// 
+.day {
+    padding: .5em 0em;
+    text-align: center;
+
+    h4 {
+        margin: .2em;
+    }
+}
+
+.firstDay {
+    background-color: $steelBlue;
+}
+
+.middleDays{
+    background-color: $silver;
+}
+
+.lastDay {
+    background-color: $steelBlue;
+}
 
 
 // id selectors
